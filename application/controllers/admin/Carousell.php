@@ -1,14 +1,14 @@
 <?php
-class Blog extends CI_Controller
+class Carousell extends CI_Controller
 {
   public function index()
   {
     // memanggil semua data siswa
-    $datablog['data'] = $this->BlogModel->select_all_blog();
+    $datacarousell['data'] = $this->CarousellModel->select_all_carousell();
     // panggil file page daftar,kemudian kembalikan nilainya ke array page
-    $data['page'] = $this->load->view('admin/pages/blog/daftar', $datablog, true);
+    $data['page'] = $this->load->view('admin/pages/carousell/daftar', $datacarousell, true);
     // atur judul
-    $data['title'] = "Blog";
+    $data['title'] = "Master Carousell";
     // kemudian tampilkan template beserta dengan datanya seperti : page.title   
     $this->load->view('admin/partial/template', $data);
   }
@@ -17,7 +17,7 @@ class Blog extends CI_Controller
 
   {
     // panggil file page daftar,kemudian kembalikan nilainya ke array page
-    $data['page'] = $this->load->view('admin/pages/blog/form_add', null, true);
+    $data['page'] = $this->load->view('admin/pages/carousell/form_add', null, true);
     // atur judul
     $data['title'] = "Form Tambah ";
     // kemudian tampilkan template beserta dengan datanya seperti : page.title   
@@ -26,12 +26,12 @@ class Blog extends CI_Controller
 
   public function form_edit()
   {
-    $judul=$this->uri->segment(4);
+    $id_carousell=$this->uri->segment(4);
     $where = [
-        "judul"=> $judul
+        "id_carousell"=> $id_carousell
     ];
-    $datablog['data_blog'] = $this->BlogModel->select_blog_by($where);
-    $data['page'] = $this->load->view('admin/pages/blog/form_edit',$datablog,true);
+    $datacarousell['data_carousell'] = $this->CarousellModel->select_carousell_by($where);
+    $data['page'] = $this->load->view('admin/pages/carousell/form_edit',$datacarousell,true);
     $data['title'] = "Form Edit";
     $this->load->view('admin/partial/template',$data);
     
@@ -43,11 +43,11 @@ class Blog extends CI_Controller
 
     // beri nama file baru untuk file upload
     // contoh output 
-    $nmFile = $data['judul'] . ".png";
+    $nmFile = $data['id_carousell'] . ".png";
 
     // setting config uploadnya
     $config = [
-      "upload_path" => "./foto/blog", //menentukan lokasi path image yang akan kita gunakan untuk menyimpan gambar hasil upload
+      "upload_path" => "./foto/carousell", //menentukan lokasi path image yang akan kita gunakan untuk menyimpan gambar hasil upload
       "allowed_types" => "jpg|jpeg|png", //menentukan extension  file yang diizinkan
       "overwrite" => TRUE, //jika pada file folder terdapat nama yang sama ,maka timpa file lama dengan file baru 
       "file_name" => $nmFile //memberi nama file sesuai dengan nama file yg sudah tertera di variabel
@@ -64,59 +64,50 @@ class Blog extends CI_Controller
 
       // mempersiapkan data yang akan di isi pada table master_guru
       $column = [
-        "id_blog"=>$data['id_blog'],
+        "id_carousell" => $data['id_carousell'],
+        "foto" => $imageData['file_name'], //ambil nama file dari gambar yang sudah di upload
         "judul" => $data['judul'],
-        "foto" => $imageData['file_name'],
-        "tanggal" => $data['tanggal'],
-        "isi" => $data['isi'],
-        
+        "deskripsi" => $data['deskripsi']
+       
       ];
       $where =[
-        "id_blog" => $data['id_blog'],
+        "id_carousell" => $data['id_carousell'],
         ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->BlogModel->editData($where,$column);
-
-      echo $this->db->last_query();
+      $insert = $this->CarousellModel->editData($where, $column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
-      // echo "
-      //        <script>
-      //            alert('Data blog berhasil diedit')
-      //            window.location.href = '" . base_url('admin/Blog/index') . "';
-      //        </script>
-      //        ";
+      echo "
+             <script>
+                 alert('Data Carousell berhasil diedit')
+                 window.location.href = '" . base_url('admin/Carousell/index') . "';
+             </script>
+             ";
     } else {
-      echo" 
-      <script>
-        console.log('".$this->upload->display_errors()."');
-      </script>
-    ";
+      // die($this->upload->display_errors());
 
-      // mempersiapkan data yang akan di isi pada table master_Blog
+      // mempersiapkan data yang akan di isi pada table master_Carousell
       $column = [
-        "id_blog"=>$data['id_blog'],
+        "id_carousell" => $data['id_carousell'],
         "judul" => $data['judul'],
-        "tanggal" => $data['tanggal'],
-        "isi" => $data['isi']
-        
+        "deskripsi" => $data['deskripsi']
+
       ];
       $where =[
-        "id_blog" => $data['id_blog'],
+        "id_carousell" => $data['id_carousell'],
         ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->BlogModel->editData($where,$column);
-
+      $insert = $this->CarousellModel->editData($where, $column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
-      // echo "
-      //     <script>
-      //         alert('Data blog berhasil diedit')
-      //         window.location.href = '" . base_url('admin/Blog/index') . "';
-      //     </script>
-      //     ";
+      echo "
+          <script>
+              alert('Data carousell berhasil diedit')
+              window.location.href = '" . base_url('admin/Carousell/index') . "';
+          </script>
+          ";
     }
   }
 
@@ -127,11 +118,11 @@ class Blog extends CI_Controller
 
     // beri nama file baru untuk file upload
     // contoh output 
-    $nmFile = $data['judul'] . ".png";
+    $nmFile = $data['id_carousell'] . ".png";
 
     // setting config uploadnya
     $config = [
-      "upload_path" => "./foto/blog", //menentukan lokasi path image yang akan kita gunakan untuk menyimpan gambar hasil upload
+      "upload_path" => "./foto/carousell", //menentukan lokasi path image yang akan kita gunakan untuk menyimpan gambar hasil upload
       "allowed_types" => "jpg|jpeg|png", //menentukan extension  file yang diizinkan
       "overwrite" => TRUE, //jika pada file folder terdapat nama yang sama ,maka timpa file lama dengan file baru 
       "file_name" => $nmFile //memberi nama file sesuai dengan nama file yg sudah tertera di variabel
@@ -148,50 +139,50 @@ class Blog extends CI_Controller
 
       // mempersiapkan data yang akan di isi pada table master_guru
       $column = [
-        "id_blog"=>null,
+        "id_carousell" => $data['id_carousell'],
+        "foto" => $imageData['file_name'], //ambil nama file dari gambar yang sudah di upload
         "judul" => $data['judul'],
-        "foto" => $imageData['file_name'],
-        "tanggal" => $data['tanggal'],
-        "isi" => $data['isi'],
+        "deskripsi" => $data['deskripsi']
+       
       ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->BlogModel->insertData($column);
+      $insert = $this->CarousellModel->insertData($column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
       echo "
              <script>
-                 alert('Data blog berhasil ditambahkan')
-                 window.location.href = '" . base_url('admin/Blog/index') . "';
+                 alert('Data Carousell berhasil ditambahkan')
+                 window.location.href = '" . base_url('admin/Carousell/index') . "';
              </script>
              ";
     } else {
        echo "
        <script>
            alert('". $this->upload->display_errors() ."')
-           window.location.href = '".base_url('admin/Blog/index')."';
+           window.location.href = '".base_url('admin/Carousell/index')."';
        </script>
        ";
     
 
       // mempersiapkan data yang akan di isi pada table master_guru
       $column = [
-        "id_blog"=>null,
+        "id_carousell" => $data['id_carousell'],
         "judul" => $data['judul'],
-        "tanggal" => $data['tanggal'],
-        "isi" => $data['isi'],
-        
-       //ambil nama file dari gambar yang sudah di upload
+        "deskripsi" => $data['deskripsi']
+       
       ];
+       
+  
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->BlogModel->insertData($column);
+      $insert = $this->CarousellModel->insertData($column);
 
-      // jika sudah, tampilkan pesan data blog berhasil ditambahkan
+      // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
       echo "
           <script>
-              alert('Data blog berhasil ditambahkan')
-              window.location.href = '" . base_url('admin/Blog/index') . "';
+              alert('Data Carousell berhasil ditambahkan')
+              window.location.href = '" . base_url('admin/Carousell/index') . "';
           </script>
           ";
     }
@@ -201,19 +192,19 @@ class Blog extends CI_Controller
       //segment = untuk mengambil nialai dari uri
       // contoh = admin/MasterBerita/hapus/123678
       // segments   1       2         3     4
-      $id_blog = $this->uri->segment(4);
+      $id_carousell = $this->uri->segment(4);
      $where =[
-          "id_blog"=> $id_blog
+          "id_carousell"=> $id_carousell
      ];
-     if(file_exists('./foto/blog/' . $id_blog . ".png")){
-        unlink('./foto/blog/' . $id_blog .".png");
+     if(file_exists('./foto/carousell/' . $id_carousell . ".png")){
+        unlink('./foto/carousell/' . $id_carousell .".png");
      }
 
-     $this->BlogModel->hapusData($where);
+     $this->CarousellModel->hapusData($where);
      echo "
      <script>
-          alert('Data blog berhasil dihapus')
-          window.location.href='",base_url('admin/Blog/index')."';
+          alert('Data Carousell berhasil dihapus')
+          window.location.href='",base_url('admin/Carousell/index')."';
      </script>
        ";
   }

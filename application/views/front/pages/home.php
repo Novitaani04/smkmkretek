@@ -2,15 +2,18 @@
     <section class="w3l-main-slider" id="home">
         <div class="companies20-content">
             <div class="owl-one owl-carousel owl-theme">
+            <?php
+                foreach($data_carousell as $value):
+                ?>
                 <div class="item">
+                
                     <li>
-                        <div class="slider-info banner-view bg bg2">
-                            <div class="banner-info">
+                        <div style=" background: url(<?=base_url('foto/carousell/') . $value->foto?>)"class="">
+                            <div class="<?=$value->foto?>">
                                 <div class="container">
                                     <div class="banner-info-bg">
-                                        <h5>A Great Place for Learning</h5>
-                                        <p class="mt-4 pr-lg-4">Choose from over 100,000 online video courses with new
-                                            additions published every month</p>
+                                        <h5><?=$value->judul?></h5>
+                                        <p class="mt-4 pr-lg-4"><?=$value->deskripsi?></p>
                                         <a class="btn btn-style btn-primary mt-xl-5 mt-4 mr-2" href="about.html"> Get
                                             Started <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
                                         <a class="btn btn-style btn-white mt-xl-5 mt-4" href="services.html"> View
@@ -21,99 +24,11 @@
                         </div>
                     </li>
                 </div>
-                <div class="item">
-                    <li>
-                        <div class="slider-info  banner-view banner-top1 bg bg2">
-                            <div class="banner-info">
-                                <div class="container">
-                                    <div class="banner-info-bg">
-                                        <h5>Learning to Love, Loving to Learn</h5>
-                                        <p class="mt-4 pr-lg-4">Choose from over 100,000 online video courses with new
-                                            additions published every month</p>
-                                        <a class="btn btn-style btn-primary mt-xl-5 mt-4 mr-2" href="about.html"> Get
-                                            Started <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                                        <a class="btn btn-style btn-white mt-xl-5 mt-4" href="services.html"> View
-                                            Courses <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </div>
-                <div class="item">
-                    <li>
-                        <div class="slider-info banner-view banner-top2 bg bg2">
-                            <div class="banner-info">
-                                <div class="container">
-                                    <div class="banner-info-bg">
-                                        <h5>A Great Place for Learning</h5>
-                                        <p class="mt-4 pr-lg-4">Choose from over 100,000 online video courses with new
-                                            additions published every month </p>
-                                        <a class="btn btn-style btn-primary mt-xl-5 mt-4 mr-2" href="about.html"> Get
-                                            Started <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                                        <a class="btn btn-style btn-white mt-xl-5 mt-4" href="services.html"> View
-                                            Courses <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </div>
-                <div class="item">
-                    <li>
-                        <div class="slider-info banner-view banner-top3 bg bg2">
-                            <div class="banner-info">
-                                <div class="container">
-                                    <div class="banner-info-bg">
-                                        <h5>Learning to Love, Loving to Learn</h5>
-                                        <p class="mt-4 pr-lg-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                            Velit
-                                            quisquam, doloremque placeat aut numquam ipsam. </p>
-                                        <a class="btn btn-style btn-primary mt-xl-5 mt-4 mr-2" href="about.html"> Get
-                                            Started <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                                        <a class="btn btn-style btn-white mt-xl-5 mt-4" href="services.html"> View
-                                            Courses <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </div>
+                <?php
+                     endforeach;
+                 ?>
             </div>
-            <div class="w3l-banner-grids">
-                <div class="bangrids-inn">
-                    <div class="banhny-grid-1">
-                        <div class="banhny-grid-icon">
-                            <span class="fa fa-laptop"></span>
-                        </div>
-                        <div class="banhny-grid-right-info">
-                            <h6><a href="#url">100,000 online courses</a></h6>
-                            <p>Focus is having the unwavering attention.</p>
-                        </div>
-                    </div>
-                    <div class="banhny-grid-1">
-                        <div class="banhny-grid-icon">
-
-                            <span class="fa fa-users"></span>
-
-                        </div>
-                        <div class="banhny-grid-right-info">
-                            <h6><a href="#url">Lifetime entrance</a></h6>
-                            <p>New skills online the best way is to develop and follow.</p>
-                        </div>
-                    </div>
-                    <div class="banhny-grid-1">
-                        <div class="banhny-grid-icon">
-                            <span class="fa fa-book"></span>
-                        </div>
-                        <div class="banhny-grid-right-info">
-                            <h6><a href="#url">Live learning</a></h6>
-                            <p>Start with your goals in mind and then work.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            
         </div>
     </section>
     <!-- /main-slider -->
@@ -156,7 +71,7 @@
             </div>
             <div class="row top-pics ">
                 <?php
-                foreach ($data_jurusan as $value) :
+                    foreach ($data_jurusan as $value) :
                 ?>
                     <div class="col-lg-3 col-md-6 mt-5">
                         <div style=" background: url(<?= base_url('foto/jurusan/') . $value->foto ?>) no-repeat center;background-size: contain;" class="top-pic1">
@@ -171,7 +86,7 @@
                         </div>
                     </div>
                 <?php
-                endforeach;
+                     endforeach;
                 ?>
                 <div class="readhny-btm text-center mx-auto mt-md-4">
                     <a class="btn btn-primary btn-style mt-md-5 mt-4" href="about.html">Read More <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
@@ -183,7 +98,6 @@
     <!--//courses-->
     <!-- extrakurikuler -->
     <div class="album py-5 bg-light">
-
         <div class="container">
             <h3 class="hny-title text-left mb-5">Extrakurikuler</h3>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -213,6 +127,37 @@
         </div>
     </div>
     <!-- endextrakurikuler -->
+    <!-- organisasi -->
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <h3 class="hny-title text-left mb-5">Organisasi</h3>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                <?php
+                    foreach ($data_organisasi as $value) :
+                ?>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="<?= base_url('foto/organisasi/') . $value->foto ?>" style="width:200px;height: 200px;">
+                        <h2><?= $value->nama?></h2>
+                        <!-- <div class="card-body">
+                            <p class="card-text"></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> -->
+                                <!-- <small class="text-muted">9 mins</small> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <?php
+                    endforeach;
+                ?>
+            </div>
+        </div>
+    </div>
+    <!-- endorganisasi -->
     <section class="w3l-bottom-grids-6 py-5" id="features">
         <div class="container py-lg-5 py-md-4">
             <div class="grids-area-hny main-cont-wthree-fea row">

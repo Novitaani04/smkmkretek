@@ -61,6 +61,18 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Blog</span></a>
             </li>
+            <!-- Nav Item - Master Siswa -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?=base_url('admin/Carousell')?>">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Carousell</span></a>
+            </li>
+            <!-- Nav Item - Master Siswa -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?=base_url('admin/Contact')?>">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Contact</span></a>
+            </li>
 
     
             <!-- Sidebar Toggler (Sidebar) -->

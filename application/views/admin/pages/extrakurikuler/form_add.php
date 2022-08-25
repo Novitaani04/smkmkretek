@@ -7,9 +7,8 @@
             <div class="mb-3">
                 <label for="inputjenisextra" class="form-label">Jenis Extra</label> <br>
                 <select name="jenis_extra" class="form-control">
-                    <option value="volli">Volli</option>
-                    <option value="atletik">Atletik</option>
-                    <option value="tekondo">Tekondo</option>
+                    <option value="Tapak Suci">Tapak Suci</option>
+                    <option value="HW">HW</option>
                 </select>
             </div> 
    
