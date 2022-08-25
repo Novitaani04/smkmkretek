@@ -17,6 +17,10 @@
                 <label for="inputFoto" class="form-label">Foto</label>
                 <input type="file" name="foto" class="form-control" id="inputFoto">
             </div>
+            <div class="mb-3">
+                <label for="inputdeskripsi" class="form-label">Deskripsi</label>
+                <input type="text" name="deskripsi" class="form-control" id="inputdeskripsi">
+            </div>
 
             <button type="submit" class="btn btn-primary">Submit</button> 
 </form>

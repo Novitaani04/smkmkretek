@@ -1,5 +1,6 @@
 <div class="container-fluit px-4">
 <form action="<?= base_url('admin/Blog/edit_data')?>" method="post" enctype="multipart/form-data">
+<input type="text" class="form-control" name="id_blog" value="<?=$data_blog->id_blog?>" id="inputid_blog"hidden>
             <div class="mb-3">
                 <label for="inputJudul" class="form-label">Judul</label>
                 <input type="text" class="form-control" name="judul" value="<?=$data_blog->judul?>" id="inputJudul">

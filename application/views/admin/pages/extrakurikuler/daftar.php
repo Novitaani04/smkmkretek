@@ -18,6 +18,7 @@
                         <th>Id Extra</th>
                         <th>Jenis Extra</th>
                         <th>Foto</th>
+                        <th>Deskripsi</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -27,7 +28,7 @@
                         <td><?=$row->id_extra?></td>
                         <td><?=$row->jenis_extra?></td>
                         <td><img src="<?=base_url('foto/extra/') . $row->foto ?>" alt="<?=$row->foto?>"width="120"height="120"></td>
-                       
+                        <td><?=$row->deskripsi?></td>
                         <td>
                             <a href="<?=base_url('admin/Extrakurikuler/form_edit/') .$row->id_extra ?>" class="btn btn-warning">Edit</a>
                             <a href="<?=base_url('admin/Extrakurikuler/hapus/') .$row->id_extra ?>" class="btn btn-danger"onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Hapus</a>

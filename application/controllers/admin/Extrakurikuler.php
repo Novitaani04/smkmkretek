@@ -63,7 +63,7 @@ class Extrakurikuler extends CI_Controller
                   "id_extra" => $data['id_extra'],
                   "jenis_extra" => $data['jenis_extra'],
                   "foto" => $imageUpload['file_name'],
-
+                  "deskripsi" => $data['deskripsi'],
               ];
     
               $where =[
@@ -93,6 +93,7 @@ class Extrakurikuler extends CI_Controller
             $column = [
                 "id_extra" => $data['id_extra'],
                 "jenis_extra" => $data['jenis_extra'],
+                "deskripsi" => $data['deskripsi'],
 
             ];
   
@@ -140,7 +141,8 @@ class Extrakurikuler extends CI_Controller
               $column = [
                 "id_extra" => $data['id_extra'],
                 "jenis_extra" => $data['jenis_extra'],
-                "foto" => $imageUpload['file_name']
+                "foto" => $imageUpload['file_name'],
+                "deskripsi" => $data['deskripsi']
             ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
@@ -159,6 +161,7 @@ class Extrakurikuler extends CI_Controller
             $column = [
                 "id_extra" => $data['id_extra'],
                 "jenis_extra" => $data['jenis_extra'],
+                "deskripsi" => $data['deskripsi'],
               ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel

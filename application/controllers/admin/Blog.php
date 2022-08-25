@@ -64,6 +64,7 @@ class Blog extends CI_Controller
 
       // mempersiapkan data yang akan di isi pada table master_guru
       $column = [
+        "id_blog"=>$data['id_blog'],
         "judul" => $data['judul'],
         "foto" => $imageData['file_name'],
         "tanggal" => $data['tanggal'],
@@ -71,19 +72,21 @@ class Blog extends CI_Controller
         
       ];
       $where =[
-        "judul" => $data['judul'],
+        "id_blog" => $data['id_blog'],
         ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->BlogModel->editData($where, $column);
+      $insert = $this->BlogModel->editData($where,$column);
+
+      echo $this->db->last_query();
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
-      echo "
-             <script>
-                 alert('Data blog berhasil diedit')
-                 window.location.href = '" . base_url('admin/Blog/index') . "';
-             </script>
-             ";
+      // echo "
+      //        <script>
+      //            alert('Data blog berhasil diedit')
+      //            window.location.href = '" . base_url('admin/Blog/index') . "';
+      //        </script>
+      //        ";
     } else {
       echo" 
       <script>
@@ -93,25 +96,27 @@ class Blog extends CI_Controller
 
       // mempersiapkan data yang akan di isi pada table master_Blog
       $column = [
+        "id_blog"=>$data['id_blog'],
         "judul" => $data['judul'],
         "tanggal" => $data['tanggal'],
         "isi" => $data['isi']
         
       ];
       $where =[
-        "judul" => $data['judul'],
+        "id_blog" => $data['id_blog'],
         ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->BlogModel->editData($where, $column);
+      $insert = $this->BlogModel->editData($where,$column);
+
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
-      echo "
-          <script>
-              alert('Data blog berhasil diedit')
-              window.location.href = '" . base_url('admin/Blog/index') . "';
-          </script>
-          ";
+      // echo "
+      //     <script>
+      //         alert('Data blog berhasil diedit')
+      //         window.location.href = '" . base_url('admin/Blog/index') . "';
+      //     </script>
+      //     ";
     }
   }
 
@@ -143,6 +148,7 @@ class Blog extends CI_Controller
 
       // mempersiapkan data yang akan di isi pada table master_guru
       $column = [
+        "id_blog"=>null,
         "judul" => $data['judul'],
         "foto" => $imageData['file_name'],
         "tanggal" => $data['tanggal'],
@@ -170,6 +176,7 @@ class Blog extends CI_Controller
 
       // mempersiapkan data yang akan di isi pada table master_guru
       $column = [
+        "id_blog"=>null,
         "judul" => $data['judul'],
         "tanggal" => $data['tanggal'],
         "isi" => $data['isi'],
