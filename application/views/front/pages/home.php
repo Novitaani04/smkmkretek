@@ -1,34 +1,34 @@
     <!-- main-slider -->
     <section class="w3l-main-slider" id="home">
         <div class="companies20-content">
+
             <div class="owl-one owl-carousel owl-theme">
-            <?php
-                foreach($data_carousell as $value):
+                <?php
+                foreach ($data_carousell as $value) :
                 ?>
-                <div class="item">
-                
-                    <li>
-                        <div style=" background: url(<?=base_url('foto/carousell/') . $value->foto?>)"class="">
-                            <div class="<?=$value->foto?>">
-                                <div class="container">
-                                    <div class="banner-info-bg">
-                                        <h5><?=$value->judul?></h5>
-                                        <p class="mt-4 pr-lg-4"><?=$value->deskripsi?></p>
-                                        <a class="btn btn-style btn-primary mt-xl-5 mt-4 mr-2" href="about.html"> Get
-                                            Started <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                                        <a class="btn btn-style btn-white mt-xl-5 mt-4" href="services.html"> View
-                                            Courses <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
+                    <div class="item">
+                        <li>
+                            <div style=" background: url(<?= base_url('foto/carousell/') . $value->foto ?>)" class="slider-info banner-view bg bg2">
+                                <div class="<?= $value->foto ?>">
+                                    <div class="container">
+                                        <div class="banner-info-bg">
+                                            <h5><?= $value->judul ?></h5>
+                                            <p class="mt-4 pr-lg-4"><?= $value->deskripsi ?></p>
+                                            <!-- <a class="btn btn-style btn-primary mt-xl-5 mt-4 mr-2" href="about.html"> Get
+                                                Started <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
+                                            <a class="btn btn-style btn-white mt-xl-5 mt-4" href="services.html"> View
+                                                Courses <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a> -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                </div>
+                        </li>
+                    </div>
                 <?php
-                     endforeach;
-                 ?>
+                endforeach;
+                ?>
             </div>
-            
+
         </div>
     </section>
     <!-- /main-slider -->
@@ -37,27 +37,27 @@
     <div class="content-1 py-5">
         <div class="container py-md-5">
             <div class="row content-1-grids">
-                <div class="col-lg-4 content-1-left forms-25-info">
-                    <div class="header-title">
-                        <span class="sub-title">About Us</span>
-                        <h3 class="hny-title">Learn at Your Own Place</h3>
+                <?php
+                foreach ($data_about as $value) :
+                ?>
+                    <div class="col-lg-4 content-1-left forms-25-info">
+                        <div class="header-title">
+                            <!-- <span class="sub-title">About Us</span> -->
+                            <h3 class="hny-title"><?= $value->judul ?></h3>
 
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 content-1-right pl-lg-5 mt-lg-0 mt-4">
-                    <p class="">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                        ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet
-                        elit. Non quae, fugiat nihil ad. Lorem ipsum dolor sit amet. Lorem ipsum init
-                        dolor sit, amet elit. Dolor ipsum non velit.
-                    </p>
-                </div>
-                <div class="col-lg-4 content-1-right pl-lg-5 mt-lg-0 mt-4">
-                    <p class="">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                        ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet
-                        elit. Non quae, fugiat nihil ad. Lorem ipsum dolor sit amet. Lorem ipsum init
-                        dolor sit, amet elit. Dolor ipsum non velit.
-                    </p>
-                </div>
+                    <div class="col-lg-4 content-1-right pl-lg-5 mt-lg-0 mt-4">
+                        <p class=""><?= $value->visi ?>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 content-1-right pl-lg-5 mt-lg-0 mt-4">
+                        <p class=""><?= $value->misi ?>
+                        </p>
+                    </div>
+                <?php
+                endforeach;
+                ?>
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@
             </div>
             <div class="row top-pics ">
                 <?php
-                    foreach ($data_jurusan as $value) :
+                foreach ($data_jurusan as $value) :
                 ?>
                     <div class="col-lg-3 col-md-6 mt-5">
                         <div style=" background: url(<?= base_url('foto/jurusan/') . $value->foto ?>) no-repeat center;background-size: contain;" class="top-pic1">
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                 <?php
-                     endforeach;
+                endforeach;
                 ?>
                 <div class="readhny-btm text-center mx-auto mt-md-4">
                     <a class="btn btn-primary btn-style mt-md-5 mt-4" href="about.html">Read More <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
@@ -102,26 +102,26 @@
             <h3 class="hny-title text-left mb-5">Extrakurikuler</h3>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <?php
-                    foreach ($data_extra as $value) :
+                foreach ($data_extra as $value) :
                 ?>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="<?= base_url('foto/extra/') . $value->foto ?>" alt="">
-                        <h1><?= $value->jenis_extra?></h1>
-                        <div class="card-body">
-                            <p class="card-text"><?= $value->deskripsi?></p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="<?= base_url('foto/extra/') . $value->foto ?>" alt="">
+                            <h1><?= $value->jenis_extra ?></h1>
+                            <div class="card-body">
+                                <p class="card-text"><?= $value->deskripsi ?></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
                                 </div>
-                                <!-- <small class="text-muted">9 mins</small> -->
                             </div>
                         </div>
                     </div>
-                </div>
                 <?php
-                    endforeach;
+                endforeach;
                 ?>
             </div>
         </div>
@@ -133,26 +133,26 @@
             <h3 class="hny-title text-left mb-5">Organisasi</h3>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                 <?php
-                    foreach ($data_organisasi as $value) :
+                foreach ($data_organisasi as $value) :
                 ?>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="<?= base_url('foto/organisasi/') . $value->foto ?>" style="width:200px;height: 200px;">
-                        <h2><?= $value->nama?></h2>
-                        <!-- <div class="card-body">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="<?= base_url('foto/organisasi/') . $value->foto ?>" style="width:200px;height: 200px;">
+                            <h2><?= $value->nama ?></h2>
+                            <!-- <div class="card-body">
                             <p class="card-text"></p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                     <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                                 </div> -->
-                                <!-- <small class="text-muted">9 mins</small> -->
+                            <!-- <small class="text-muted">9 mins</small> -->
                             <!-- </div> -->
-                        <!-- </div> -->
+                            <!-- </div> -->
+                        </div>
                     </div>
-                </div>
                 <?php
-                    endforeach;
+                endforeach;
                 ?>
             </div>
         </div>
@@ -478,9 +478,9 @@
                         </div>
                     </div>
                 </div>
+                <!-- /grids -->
             </div>
-            <!-- /grids -->
-        </div>
-        <!-- //grids -->
+            <!-- //grids -->
     </section>
+
     <!-- //testimonials -->
