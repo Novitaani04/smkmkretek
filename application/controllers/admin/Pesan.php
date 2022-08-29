@@ -42,7 +42,6 @@ class Pesan extends CI_Controller
     $data = $this->input->post();
     
       $column = [
-        "id_pesan" => $data['id_pesan'],
         "nama" => $data['nama'],
         "email" => $data['email'],
         "pesan" => $data['pesan']
@@ -58,6 +57,31 @@ class Pesan extends CI_Controller
              <script>
                  alert('Data Pesan berhasil ditambahkan')
                  window.location.href = '" . base_url('admin/Pesan/index') . "';
+             </script>
+             ";
+  }
+  public function add_new_data_user()
+  {
+    // menerima data formulir dari halaman form_add
+    $data = $this->input->post();
+    
+      $column = [
+     
+        "nama" => $data['nama'],
+        "email" => $data['email'],
+        "pesan" => $data['pesan']
+      
+       
+      ];
+      // kirim data kolom ke insertData pada MasterguruModel
+      $insert = $this->PesanModel->insertData($column);
+
+      // jika sudah, tampilkan pesan data guru berhasil ditambahkan
+      // setelah itu pindah ke halaman utama pada controller Masterguru
+      echo "
+             <script>
+                 alert('Data Pesan berhasil ditambahkan')
+                 window.location.href = '" . base_url('front/DataContact') . "';
              </script>
              ";
   }

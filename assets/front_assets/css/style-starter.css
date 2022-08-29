@@ -16010,7 +16010,7 @@ p.count-text {
   margin: 40px 0;
 }
 
-.w3l-newsletter .forms-25-info input {
+.w3l-newsletter .forms-25-info input,.w3l-newsletter .forms-25-info select {
   background: #f5f5f5;
   width: 100%;
   font-size: 16px;

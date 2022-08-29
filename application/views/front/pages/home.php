@@ -8,7 +8,7 @@
                 ?>
                     <div class="item">
                         <li>
-                            <div style=" background: url(<?= base_url('foto/carousell/') . $value->foto ?>)" class="slider-info banner-view bg bg2">
+                            <div style=" background: url(<?= base_url('foto/carousell/') . $value->foto ?>);background-repeat:no-repeat;background-size:100%;" class="slider-info banner-view bg bg2">
                                 <div class="<?= $value->foto ?>">
                                     <div class="container">
                                         <div class="banner-info-bg">
@@ -158,93 +158,13 @@
         </div>
     </div>
     <!-- endorganisasi -->
-    <section class="w3l-bottom-grids-6 py-5" id="features">
-        <div class="container py-lg-5 py-md-4">
-            <div class="grids-area-hny main-cont-wthree-fea row">
-                <!-- /feature-left-->
-                <div class="col-md-6 grids-feature mt-4">
-                    <div class="area-box">
-                        <div class="row">
-                            <div class="col-sm-2 icon">
-                                <span class="fa fa-video-camera"></span>
-                            </div>
-                            <div class="col-sm-10 area-box-info">
-                                <h4><a href="#feature" class="title-head">Become a instructor on DigitalEdu</a></h4>
-                                <p class="mt-3">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet.</p>
-                                <a class="btn btn-primary btn-style mt-4" href="about.html">Start today <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 grids-feature mt-4">
-                    <div class="area-box">
-                        <div class="row">
-                            <div class="col-sm-2 icon">
-                                <span class="fa fa-tasks"></span>
-                            </div>
-                            <div class="col-sm-10 area-box-info">
-                                <h4><a href="#feature" class="title-head">DigitalEdu for business & Community</a></h4>
-                                <p class="mt-3">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet..</p>
-                                <a class="btn btn-primary btn-style mt-4" href="about.html">Start today <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- //bottom-grids-->
 
     <!-- middle -->
-    <div class="middle py-5">
-        <div class="container pt-lg-2 pb-lg-4 py-4">
-            <div class="welcome-left text-center py-lg-4">
-                <h3 class="hny-title">Educating Champions of a Just and Sustainable World.</h3>
-                <div class="middle-buttons pb-5">
-                    <a href="about.html" class="btn btn-style btn-white mt-sm-5 mt-4 mr-2">Read More <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                    <a href="contact.html" class="btn btn-style btn-primary mt-sm-5 mt-4">Contact Us <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- //middle -->
-    <!-- stats -->
-    <section class="w3_stats py-lg-0 py-5" id="stats">
-        <div class="container">
-            <div class="w3-stats">
-                <div class="row">
-                    <div class="col-md-3 col-6 mt-md-0 mt-5">
-                        <div class="counter">
-                            <span class="fa fa-clone"></span>
-                            <div class="timer count-title count-number mt-3" data-to="15100" data-speed="1500"></div>
-                            <p class="count-text">Successfully Trained</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 mt-md-0 mt-5">
-                        <div class="counter">
-                            <span class="fa fa-video-camera"></span>
-                            <div class="timer count-title count-number mt-3" data-to="19256" data-speed="1500"></div>
-                            <p class="count-text ">We Proudly Received</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 mt-md-0 mt-5">
-                        <div class="counter">
-                            <span class="fa fa-smile-o"></span>
-                            <div class="timer count-title count-number mt-3" data-to="12100" data-speed="1500"></div>
-                            <p class="count-text">Getting Featured On</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 mt-md-0 mt-5">
-                        <div class="counter">
-                            <span class="fa fa-users"></span>
-                            <div class="timer count-title count-number mt-3" data-to="2560" data-speed="1500"></div>
-                            <p class="count-text">Firmly Eastablished</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- //stats -->
     <!-- home page video popup section -->
     <section class="w3l-videohny" id="video">
@@ -260,14 +180,14 @@
 
                     <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
                     <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                        <iframe src="https://player.vimeo.com/video/18212142" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/dDeyzuvF0uk" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                     </div>
                     <!--//video-->
                 </div>
 
                 <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
                 <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                    <iframe src="https://player.vimeo.com/video/18212142" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/dDeyzuvF0uk" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -285,7 +205,7 @@
                 foreach ($data_blog as $value) :
                 ?>
                     <div class="col-lg-4 col-md-6 item">
-                        <div style=" background: url(<?= base_url('foto/blog/') . $value->foto ?>) no-repeat center;background-size: contain;" class="card">
+                        <div style=" background: url(<?= base_url('foto/blog/') . $value->foto ?>) no-repeat center;background-size: 100%;width: 350px;height: 200px;" class="card">
                             <div class="card-header p-0 position-relative">
                                 <a href="blog-single.html">
                                     <img class="card-img-bottom d-block radius-image-full" src="(<?= base_url('foto/blog/') . $value->foto ?>" alt="">
@@ -324,14 +244,29 @@
                 <div class="forms-25-info">
 
                     <div class="header-title mb-md-5 mt-4">
-                        <span class="sub-title">Subscribe to our Newsletter</span>
-                        <h3 class="hny-title text-left">Join our Community of Students</h3>
+                        <!-- <span class="sub-title">Subscribe to our Newsletter</span> -->
+                        <h3 class="hny-title text-left">Form Pendaftaran</h3>
                     </div>
-                    <form action="#" method="post" class="signin-form mt-4 mb-2">
+                    <form action="<?=base_url('admin/MasterSiswa/add_new_data_siswa')?>" method="post" class="signin-form mt-4 mb-2" enctype="multipart/form-data">
                         <div class="forms-gds">
-                            <input type="text" name="" placeholder="Name" required />
-                            <input type="email" name="" placeholder="Email" required />
-                            <button class="btn btn-style btn-primary">Subscribe</button>
+
+                            <div class="row">
+                                <input class="mb-2" type="number" name="nik" placeholder="NIK" required />
+                                <input class="mb-2" type="text" name="nama_siswa" placeholder="Nama Siswa" required />
+                                <select name="jk" class="form-control mb-2">
+                                    <option value="l">Laki-Laki</option>
+                                    <option value="p">Perempuan</option>   
+                                </select>
+                                <select name="jurusan" class="form-control mb-2">
+                                    <option value="rpl">Rekayasa Perangkat Lunak</option>
+                                    <option value="akl">Akuntansi</option>
+                                    <option value="tbsm">Teknik Bisnis Sepeda Motor</option>
+                                </select>
+                                <input class="mb-2" type="text" name="alamat" placeholder="Alamat" required />
+                                <input type="file" name="passfoto" class="form-control mb-2" id="inputPassFoto">
+   
+                                <button class="btn btn-style btn-primary">Daftar</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -340,147 +275,5 @@
     </section>
     <!--//w3l-newsletter-->
     <!-- testimonials -->
-    <section class="w3l-clients-1" id="testimonials">
-        <!-- /grids -->
-        <div class="cusrtomer-layout py-5">
-            <div class="container py-lg-5 py-md-4">
-                <div class="header-title mb-md-5 mb-4">
-                    <span class="sub-title">Testimonials</span>
-                    <h3 class="hny-title text-left">What People Say</h3>
-                </div>
-                <!-- /grids -->
-                <div class="testimonial-row">
-                    <div id="owl-demo1" class="owl-two owl-carousel owl-theme mb-md-3 mb-sm-5 mb-4">
-                        <div class="item">
-                            <div class="testimonial-content">
-                                <div class="testimonial">
-                                    <blockquote>
-                                        <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                            laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                            facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                            voluptate rem ullam dolore nisi est quasi, doloribus tempora.</q>
-                                    </blockquote>
-                                </div>
-                                <div class="testi-des">
-                                    <div class="test-img">
-                                        <img src="assets/images/team1.jpg" class="img-fluid" alt="client-img">
-                                    </div>
-                                    <div class="peopl align-self">
-                                        <h4>Gloria Parker</h4>
-                                        <p class="indentity">Student </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-content">
-                                <div class="testimonial">
-                                    <blockquote>
-                                        <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                            laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                            facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                            voluptate rem ullam dolore nisi est quasi, doloribus tempora.</q>
-                                    </blockquote>
-                                </div>
-                                <div class="testi-des">
-                                    <div class="test-img"><img src="assets/images/team2.jpg" class="img-fluid" alt="client-img">
-                                    </div>
-                                    <div class="peopl align-self">
-                                        <h4>Tommy sakura</h4>
-                                        <p class="indentity">Student </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-content">
-                                <div class="testimonial">
-
-                                    <blockquote>
-                                        <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                            laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                            facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                            voluptate rem ullam dolore nisi est quasi, doloribus tempora.</q>
-                                    </blockquote>
-
-                                </div>
-                                <div class="testi-des">
-                                    <div class="test-img"><img src="assets/images/team3.jpg" class="img-fluid" alt="client-img">
-                                    </div>
-                                    <div class="peopl align-self">
-                                        <h4>Bruce Bailey </h4>
-                                        <p class="indentity">Student </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-content">
-                                <div class="testimonial">
-                                    <blockquote>
-                                        <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                            laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                            facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                            voluptate rem ullam dolore nisi est quasi, doloribus tempora.</q>
-                                    </blockquote>
-
-                                </div>
-                                <div class="testi-des">
-                                    <div class="test-img"><img src="assets/images/team3.jpg" class="img-fluid" alt="client-img">
-                                    </div>
-                                    <div class="peopl align-self">
-                                        <h4>Ruth Edwards</h4>
-                                        <p class="indentity">Student </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-content">
-                                <div class="testimonial">
-                                    <blockquote>
-                                        <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                            laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                            facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                            voluptate rem ullam dolore nisi est quasi, doloribus tempora.</q>
-                                    </blockquote>
-                                </div>
-                                <div class="testi-des">
-                                    <div class="test-img">
-                                        <img src="assets/images/team1.jpg" class="img-fluid" alt="client-img">
-                                    </div>
-                                    <div class="peopl align-self">
-                                        <h4>Gloria Parker</h4>
-                                        <p class="indentity">Student </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-content">
-                                <div class="testimonial">
-                                    <blockquote>
-                                        <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                            laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                            facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                            voluptate rem ullam dolore nisi est quasi, doloribus tempora.</q>
-                                    </blockquote>
-                                </div>
-                                <div class="testi-des">
-                                    <div class="test-img"><img src="assets/images/team2.jpg" class="img-fluid" alt="client-img">
-                                    </div>
-                                    <div class="peopl align-self">
-                                        <h4>Tommy sakura</h4>
-                                        <p class="indentity">Student </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /grids -->
-            </div>
-            <!-- //grids -->
-    </section>
 
     <!-- //testimonials -->

@@ -10,8 +10,11 @@
             $dataHome['data_organisasi'] = $this->OrganisasiModel->select_all_organisasi();
             $dataHome['data_carousell'] = $this->CarousellModel->select_all_carousell();
             $dataHome['data_about'] = $this->AboutModel->select_all_about();
+            $dataGuru['active'] = "home";
+            $data['header'] = $this->load->view('front/partial/header',$dataGuru,true);
             $data['page'] = $this->load->view('front/pages/home',$dataHome,true);
             $data['title'] = "Home";
+            $data['contact'] =$this->ContactModel->select_row_contact();
             $this->load->view('front/partial/template',$data);
         }
     }

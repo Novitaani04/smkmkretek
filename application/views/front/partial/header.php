@@ -27,17 +27,17 @@
                         </div>
                     </nav>
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item <?=$active == 'home' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/Home')?>">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item <?=$active == 'guru' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/DataGuru')?>">Data Guru</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item <?=$active == 'jurusan' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/DataJurusan')?>">Jurusan</a>
                         </li>
                        
-                        <li class="nav-item">
+                        <li class="nav-item <?=$active == 'contact' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/DataContact')?>">Contact</a>
                         </li>
                     </ul>

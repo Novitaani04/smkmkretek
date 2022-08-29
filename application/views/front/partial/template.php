@@ -70,9 +70,9 @@ Author URL: http://w3layouts.com
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5">
                         <h6 class="footer-title-29">Contact Info </h6>
-                        <p><strong>Address :</strong> DigitalEdu, 343 Honey Avenue street, NY - 62617.</p>
-                        <p class="my-2"><strong>Phone :</strong> <a href="tel:+12 23456799">+12 23456799</a></p>
-                        <p><strong>Email :</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+                        <p><strong>Address :</strong><?=$contact->alamat?></p>
+                        <p class="my-2"><strong>Phone :</strong> <a href="tel:<?=$contact->telepon?>"><?=$contact->telepon?></a></p>
+                        <p><strong>Email :</strong> <a href="<?=$contact->email?>"><?=$contact->email?></a></p>
                     </div>
                 </div>
             </div>

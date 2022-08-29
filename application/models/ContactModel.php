@@ -12,6 +12,17 @@ class ContactModel extends CI_Model
         // kemudian kembalikan nilai dalam bentuk result(array/assoc)
         return $query->result();
     }
+    public function select_row_contact()
+    {
+        // menampilkan semua kolom
+        $this->db->select('*');
+        // didalam table contact
+        $this->db->from('contact');
+        // ambil result datanya
+        $query = $this->db->get();
+        // kemudian kembalikan nilai dalam bentuk result(array/assoc)
+        return $query->row();
+    }
     public function select_contact_by($where)
     {
          // menampilkan semua kolom

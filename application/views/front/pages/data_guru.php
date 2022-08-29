@@ -1,3 +1,4 @@
+<div style="background:#212121;width:100%;height: 100px;"></div>
 <div class="w3l-homeblog py-5" id="homeblog">
     <div class="container py-lg-5 py-md-4">
         <div class="header-title mb-3 mt-5">
