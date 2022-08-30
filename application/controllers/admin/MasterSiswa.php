@@ -73,7 +73,7 @@ class MasterSiswa extends CI_Controller
               ];
 
           // kirim data kolom ke insertData pada MasterSiswaModel
-          $insert = $this->MasterSiswaModel->editData($where,$column);
+          $this->MasterSiswaModel->editData($where,$column);
           
           // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
           // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -97,7 +97,7 @@ class MasterSiswa extends CI_Controller
               ];
 
           // kirim data kolom ke insertData pada MasterSiswaModel
-          $insert = $this->MasterSiswaModel->editData($where,$column);
+           $this->MasterSiswaModel->editData($where,$column);
           
           // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
           // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -146,7 +146,7 @@ class MasterSiswa extends CI_Controller
         "passfoto" => $imageData['file_name'] //ambil nama file dari gambar yang sudah di upload
       ];
       // kirim data kolom ke insertData pada MasterSiswaModel
-      $insert = $this->MasterSiswaModel->insertData($column);
+      $this->MasterSiswaModel->insertData($column);
 
       // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -174,7 +174,7 @@ class MasterSiswa extends CI_Controller
         "passfoto" => "placeholder.jpg" //ambil nama file dari gambar yang sudah di upload
       ];
       // kirim data kolom ke insertData pada MasterSiswaModel
-      $insert = $this->MasterSiswaModel->insertData($column);
+      $this->MasterSiswaModel->insertData($column);
 
       // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -222,7 +222,7 @@ class MasterSiswa extends CI_Controller
         "passfoto" => $imageData['file_name'] //ambil nama file dari gambar yang sudah di upload
       ];
       // kirim data kolom ke insertData pada MasterSiswaModel
-      $insert = $this->MasterSiswaModel->insertData($column);
+       $this->MasterSiswaModel->insertData($column);
 
       // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -250,7 +250,7 @@ class MasterSiswa extends CI_Controller
         "passfoto" => "placeholder.jpg" //ambil nama file dari gambar yang sudah di upload
       ];
       // kirim data kolom ke insertData pada MasterSiswaModel
-      $insert = $this->MasterSiswaModel->insertData($column);
+      $this->MasterSiswaModel->insertData($column);
 
       // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller MasterSiswa

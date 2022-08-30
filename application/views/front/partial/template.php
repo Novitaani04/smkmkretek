@@ -11,17 +11,16 @@ Author URL: http://w3layouts.com
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>DigitalEdu an Education Category Bootstrap Responsive Website Template - Home : W3Layouts</title>
     <!--/google-fonts-->
-    <link href="//fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!--//google-fonts-->
     <!-- Template CSS -->
-    <link rel="stylesheet" href="<?=base_url('assets/front_assets/') ?>css/style-starter.css">
+    <link rel="stylesheet" href="<?= base_url('assets/front_assets/') ?>css/style-starter.css">
 
 </head>
 
 <body>
     <!--header-->
-    <?= $this->load->view('front/partial/header',null,true); ?>
+    <?= $this->load->view('front/partial/header', null, true); ?>
     <!--/header-->
 
     <?= $page ?>
@@ -33,30 +32,28 @@ Author URL: http://w3layouts.com
                 <div class="row footer-top-29">
                     <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-1 pr-lg-5">
                         <div class="footer-logo mb-3">
-                            <a class="navbar-brand" href="index.html">DigitalEdu</a>
+                            <a class="navbar-brand" href="index.html">SMK M KRETEK</a>
                         </div>
-                        <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at
-                            tempufddfel. Lorem ipsum dolor sit amet Semper at elit.</p>
+                        <p>SMK Muhammadiyah Kretek adalah sekolah yang mengedepankan karakter siswa.Karakter ersebut di antaranya Sportifitas,Terampil,Inovatif,dan Agamas(SATRIA)</p>
                         <div class="main-social-footer-29 mt-4">
-                            <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
-                            <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
-                            <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
-                            <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
+                            <a href="https://www.facebook.com/smkmkretek" class="facebook"><span class="fa fa-facebook"></span></a>
+                            <a href="//www.instagram.com/smkmkretek/ " class="instagram"><span class="fa fa-instagram"></span></a>
+                            <a href="https://www.youtube.com/channel/UCI83h6I5aTWRWM1DRU9eHPA" class="youtube"><span class="fa fa-youtube"></span></a>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-2 mt-sm-0 mt-5">
+                    <!-- <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-2 mt-sm-0 mt-5">
 
                         <ul>
                             <h6 class="footer-title-29">Usefull Links</h6>
-                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="">About Us</a></li>
                             <li><a href="services.html">Courses</a></li>
                             <li><a href="#pricing"> Pricing plans</a></li>
                             <li><a href="#careers"> Careers</a></li>
                             <li><a href="blog.html"> Blog posts</a></li>
                             <li><a href="contact.html">Contact us</a></li>
                         </ul>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-3 mt-lg-0 mt-5">
+                    </div> -->
+                    <!-- <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-3 mt-lg-0 mt-5">
                         <h6 class="footer-title-29">More Info</h6>
                         <ul>
                             <li><a href="#profile">Profile</a></li>
@@ -67,12 +64,12 @@ Author URL: http://w3layouts.com
                             <li><a href="#support"> Support</a></li>
                         </ul>
 
-                    </div>
+                    </div> -->
                     <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5">
                         <h6 class="footer-title-29">Contact Info </h6>
-                        <p><strong>Address :</strong><?=$contact->alamat?></p>
-                        <p class="my-2"><strong>Phone :</strong> <a href="tel:<?=$contact->telepon?>"><?=$contact->telepon?></a></p>
-                        <p><strong>Email :</strong> <a href="<?=$contact->email?>"><?=$contact->email?></a></p>
+                        <p><strong>Address :</strong><?= $contact->alamat ?></p>
+                        <p class="my-2"><strong>Phone :</strong> <a href="tel:<?= $contact->telepon ?>"><?= $contact->telepon ?></a></p>
+                        <p><strong>Email :</strong> <a href="<?= $contact->email ?>"><?= $contact->email ?></a></p>
                     </div>
                 </div>
             </div>
@@ -84,8 +81,7 @@ Author URL: http://w3layouts.com
     <section class="w3l-copyright">
         <div class="container">
             <div class="row bottom-copies">
-                <p class="col-lg-8 copy-footer-29">© 2020 DigitalEdu. All rights reserved. Design by <a
-                        href="https://w3layouts.com/" target="_blank">
+                <p class="col-lg-8 copy-footer-29">© 2020 DigitalEdu. All rights reserved. Design by <a href="https://w3layouts.com/" target="_blank">
                         W3Layouts</a></p>
 
                 <div class="col-lg-4 footer-list-29">
@@ -105,7 +101,7 @@ Author URL: http://w3layouts.com
         </button>
         <script>
             // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function () {
+            window.onscroll = function() {
                 scrollFunction()
             };
 
@@ -127,14 +123,14 @@ Author URL: http://w3layouts.com
     </section>
     <!-- //copyright -->
 
-    <script src="<?=base_url('assets/front_assets/') ?>js/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
+    <script src="<?= base_url('assets/front_assets/') ?>js/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
 
-    <script src="<?=base_url('assets/front_assets/') ?>js/theme-change.js"></script><!-- theme switch js (light and dark)-->
+    <script src="<?= base_url('assets/front_assets/') ?>js/theme-change.js"></script><!-- theme switch js (light and dark)-->
 
-    <script src="<?=base_url('assets/front_assets/') ?>js/owl.carousel.js"></script>
+    <script src="<?= base_url('assets/front_assets/') ?>js/owl.carousel.js"></script>
     <!-- script for banner slider-->
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.owl-one').owlCarousel({
                 loop: true,
                 margin: 0,
@@ -167,9 +163,9 @@ Author URL: http://w3layouts.com
     </script>
     <!-- //script -->
     <!-- magnific popup -->
-    <script src="<?=base_url('assets/front_assets/') ?>js/jquery.magnific-popup.min.js"></script>
+    <script src="<?= base_url('assets/front_assets/') ?>js/jquery.magnific-popup.min.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.popup-with-zoom-anim').magnificPopup({
                 type: 'inline',
 
@@ -205,11 +201,11 @@ Author URL: http://w3layouts.com
     </script>
     <!-- //magnific popup -->
     <!-- /counter-->
-    <script src="<?=base_url('assets/front_assets/')?>js/counter.js"></script>
+    <script src="<?= base_url('assets/front_assets/') ?>js/counter.js"></script>
     <!-- //counter-->
     <!-- script for tesimonials carousel slider -->
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $("#owl-demo1").owlCarousel({
                 loop: true,
                 margin: 20,
@@ -221,9 +217,9 @@ Author URL: http://w3layouts.com
                         nav: false
                     },
                     1000: {
-                        items:2,
+                        items: 2,
                         nav: false,
-                        loop:true
+                        loop: true
                     }
                 }
             })
@@ -233,7 +229,7 @@ Author URL: http://w3layouts.com
 
     <!--/MENU-JS-->
     <script>
-        $(window).on("scroll", function () {
+        $(window).on("scroll", function() {
             var scroll = $(window).scrollTop();
 
             if (scroll >= 80) {
@@ -244,14 +240,14 @@ Author URL: http://w3layouts.com
         });
 
         //Main navigation Active Class Add Remove
-        $(".navbar-toggler").on("click", function () {
+        $(".navbar-toggler").on("click", function() {
             $("header").toggleClass("active");
         });
-        $(document).on("ready", function () {
+        $(document).on("ready", function() {
             if ($(window).width() > 991) {
                 $("header").removeClass("active");
             }
-            $(window).on("resize", function () {
+            $(window).on("resize", function() {
                 if ($(window).width() > 991) {
                     $("header").removeClass("active");
                 }
@@ -262,8 +258,8 @@ Author URL: http://w3layouts.com
 
     <!-- disable body scroll which navbar is in active -->
     <script>
-        $(function () {
-            $('.navbar-toggler').click(function () {
+        $(function() {
+            $('.navbar-toggler').click(function() {
                 $('body').toggleClass('noscroll');
             })
         });
@@ -271,9 +267,9 @@ Author URL: http://w3layouts.com
     <!-- //disable body scroll which navbar is in active -->
 
     <!--bootstrap-->
-    <script src="<?=base_url('assets/front_assets/') ?>js/bootstrap.min.js"></script>
+    <script src="<?= base_url('assets/front_assets/') ?>js/bootstrap.min.js"></script>
     <!-- //bootstrap-->
-
+    
 </body>
 
 </html>

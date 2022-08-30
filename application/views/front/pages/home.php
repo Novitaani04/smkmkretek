@@ -52,8 +52,8 @@
                         </p>
                     </div>
                     <div class="col-lg-4 content-1-right pl-lg-5 mt-lg-0 mt-4">
-                        <p class=""><?= $value->misi ?>
-                        </p>
+                        <?= $value->misi ?>
+                       
                     </div>
                 <?php
                 endforeach;
@@ -167,7 +167,7 @@
 
     <!-- //stats -->
     <!-- home page video popup section -->
-    <section class="w3l-videohny" id="video">
+    <section class="w3l-videohny" id="video" style="background: url('http://i3.ytimg.com/vi/dDeyzuvF0uk/hqdefault.jpg') no-repeat center;">
         <div class="new-block py-5">
             <div class="container py-lg-5">
                 <div class="history-info position-relative">

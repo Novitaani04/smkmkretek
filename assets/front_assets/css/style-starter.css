@@ -16782,7 +16782,7 @@ div#small-dialog iframe {
 /*-- //play icon animation --*/
 
 .w3l-videohny .history-info{
-  background: url(../images/banner1.jpg) no-repeat center;
+  background-position: center center;
   background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;

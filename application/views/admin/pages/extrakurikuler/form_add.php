@@ -9,6 +9,10 @@
                 <select name="jenis_extra" class="form-control">
                     <option value="Tapak Suci">Tapak Suci</option>
                     <option value="HW">HW</option>
+                    <option value="Seni Musik">Seni Musik</option>
+                    <option value="Tilawah">Tilawah</option>
+                    <option value="Desain Grafis">Desain Grafis</option>
+                    <option value="Bola Voli">Bola Voli</option>
                 </select>
             </div> 
    

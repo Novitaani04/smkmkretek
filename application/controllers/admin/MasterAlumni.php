@@ -73,7 +73,7 @@
               ];
 
           // kirim data kolom ke insertData pada MasterSiswaModel
-          $insert = $this->MasterAlumniModel->editData($where,$column);
+          $this->MasterAlumniModel->editData($where,$column);
           
           // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
           // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -105,7 +105,7 @@
               ];
 
           // kirim data kolom ke insertData pada MasterSiswaModel
-          $insert = $this->MasterAlumniModel->editData($where,$column);
+         $this->MasterAlumniModel->editData($where,$column);
           
           // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
           // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -151,7 +151,7 @@
           ];
 
           // kirim data kolom ke insertData pada MasterSiswaModel
-          $insert = $this->MasterAlumniModel->insertData($column);
+          $this->MasterAlumniModel->insertData($column);
           
           // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
           // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -173,7 +173,7 @@
           ];
 
           // kirim data kolom ke insertData pada MasterSiswaModel
-          $insert = $this->MasterAlumniModel->insertData($column);
+           $this->MasterAlumniModel->insertData($column);
           
           // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
           // setelah itu pindah ke halaman utama pada controller MasterSiswa

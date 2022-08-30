@@ -155,7 +155,7 @@ class Blog extends CI_Controller
         "isi" => $data['isi'],
       ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->BlogModel->insertData($column);
+     $this->BlogModel->insertData($column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
@@ -184,7 +184,7 @@ class Blog extends CI_Controller
        //ambil nama file dari gambar yang sudah di upload
       ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->BlogModel->insertData($column);
+      $this->BlogModel->insertData($column);
 
       // jika sudah, tampilkan pesan data blog berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru

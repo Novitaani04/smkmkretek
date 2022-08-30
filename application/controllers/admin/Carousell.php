@@ -74,7 +74,7 @@ class Carousell extends CI_Controller
         "id_carousell" => $data['id_carousell'],
         ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->CarousellModel->editData($where, $column);
+      $this->CarousellModel->editData($where, $column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
@@ -98,7 +98,7 @@ class Carousell extends CI_Controller
         "id_carousell" => $data['id_carousell'],
         ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->CarousellModel->editData($where, $column);
+      $this->CarousellModel->editData($where, $column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
@@ -146,7 +146,7 @@ class Carousell extends CI_Controller
        
       ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->CarousellModel->insertData($column);
+      $this->CarousellModel->insertData($column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
@@ -175,7 +175,7 @@ class Carousell extends CI_Controller
        
   
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->CarousellModel->insertData($column);
+      $this->CarousellModel->insertData($column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru

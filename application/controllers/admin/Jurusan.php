@@ -71,7 +71,7 @@ class Jurusan extends CI_Controller
                   ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
-              $insert = $this->JurusanModel->editData($where,$column);
+            $this->JurusanModel->editData($where,$column);
               
               // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
               // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -101,7 +101,7 @@ class Jurusan extends CI_Controller
                   ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
-              $insert = $this->JurusanModel->editData($where,$column);
+              $this->JurusanModel->editData($where,$column);
               
               // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
               // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -143,7 +143,7 @@ class Jurusan extends CI_Controller
             ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
-              $insert = $this->JurusanModel->insertData($column);
+              $this->JurusanModel->insertData($column);
               
               // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
               // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -161,7 +161,7 @@ class Jurusan extends CI_Controller
               ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
-              $insert = $this->JurusanModel->insertData($column);
+             $this->JurusanModel->insertData($column);
               
               // jika sudah, tampilkan pesan data jurusan berhasil ditambahkan
               // setelah itu pindah ke halaman utama pada controller MasterSiswa

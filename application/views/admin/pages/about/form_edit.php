@@ -9,12 +9,12 @@
 
             <div class="mb-3">
                 <label for="inputvisi" class="form-label">Visi</label> <br>
-                <textarea name="visi" id="inputvisi" cols="30" rows="10" class="form-control"><?=$data_contact->visi?></textarea>
+                <textarea name="visi" id="inputvisi" cols="30" rows="10" class="form-control"><?=$data_about->visi?></textarea>
             </div> 
 
             <div class="mb-3">
                 <label for="inputmisi" class="form-label">Misi</label> <br>
-                <textarea name="misi" id="inputmisi" cols="30" rows="10" class="form-control"><?=$data_contact->misi?></textarea>
+                <textarea name="misi" id="summernote" cols="30" rows="10" class="form-control"><?=$data_about->misi?></textarea>
             </div> 
             <button type="submit" class="btn btn-primary">Submit</button> 
 </form>

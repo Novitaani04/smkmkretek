@@ -71,7 +71,7 @@ class Organisasi extends CI_Controller
                   ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
-              $insert = $this->OrganisasiModel->editData($where,$column);
+              $this->OrganisasiModel->editData($where,$column);
               
               // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
               // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -102,7 +102,7 @@ class Organisasi extends CI_Controller
                   ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
-              $insert = $this->OrganisasiModel->editData($where,$column);
+              $this->OrganisasiModel->editData($where,$column);
               
               // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
               // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -144,7 +144,7 @@ class Organisasi extends CI_Controller
             ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
-              $insert = $this->OrganisasiModel->insertData($column);
+              $this->OrganisasiModel->insertData($column);
               
               // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
               // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -162,7 +162,7 @@ class Organisasi extends CI_Controller
               ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
-              $insert = $this->OrganisasiModel->insertData($column);
+              $this->OrganisasiModel->insertData($column);
               
               // jika sudah, tampilkan pesan data organisasi berhasil ditambahkan
               // setelah itu pindah ke halaman utama pada controller MasterSiswa
