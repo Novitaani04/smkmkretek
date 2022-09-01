@@ -125,7 +125,7 @@ class Extrakurikuler extends CI_Controller
           // setting config uploadnya
           $config = [
               "upload_path"=>"./foto/extra/", //menentukan lokasi path image yang akan kita gunakan untuk menyimpan gambaha hasil upload
-              "allowed_types" => "jpg|jepg|png",//menentukan extension  file yang diizinkan
+              "allowed_types" => "jpg|jpeg|png",//menentukan extension  file yang diizinkan
               "overwrite" => TRUE,//jika pada file folder terdapat nama yang sama ,maka timpa file lama dengan file baru 
               "file_name" => $nmFile //memberi nama file sesuai dengan nama file yg sudah tertera di variabel
           ];

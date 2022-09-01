@@ -49,13 +49,13 @@ class Pesan extends CI_Controller
        
       ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->PesanModel->insertData($column);
+      $this->PesanModel->insertData($column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
       echo "
              <script>
-                 alert('Data Pesan berhasil ditambahkan')
+                 alert('Pesan berhasil ditambahkan')
                  window.location.href = '" . base_url('admin/Pesan/index') . "';
              </script>
              ";
@@ -74,13 +74,13 @@ class Pesan extends CI_Controller
        
       ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->PesanModel->insertData($column);
+     $this->PesanModel->insertData($column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
       echo "
              <script>
-                 alert('Data Pesan berhasil ditambahkan')
+                 alert('Pesan berhasil ditambahkan')
                  window.location.href = '" . base_url('front/DataContact') . "';
              </script>
              ";
@@ -102,13 +102,13 @@ class Pesan extends CI_Controller
       ];
       
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->PesanModel->editData($where, $column);
+      $this->PesanModel->editData($where, $column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
       echo "
              <script>
-                 alert('Data Pesan berhasil diedit')
+                 alert('Pesan berhasil diedit')
                  window.location.href = '" . base_url('admin/Pesan/index') . "';
              </script>
              ";
@@ -124,7 +124,7 @@ class Pesan extends CI_Controller
      $this->PesanModel->hapusData($where);
      echo "
      <script>
-          alert('Data pesan berhasil dihapus')
+          alert('Pesan berhasil dihapus')
           window.location.href='",base_url('admin/pesan/index')."';
      </script>
        ";
