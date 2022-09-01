@@ -1,8 +1,8 @@
 <div class="container-fluit px-4">
 <form action="<?= base_url('admin/Extrakurikuler/add_new_data')?>" method="post" enctype="multipart/form-data">
             <div class="mb-3">
-                <label for="inputid_extraa" class="form-label">id_Extra</label>
-                <input type="number" class="form-control" name="id_extraa" id="inputid_extra">
+                <label for="inputid_extra" class="form-label">id_Extra</label>
+                <input type="number" class="form-control" name="id_extra" id="inputid_extra">
             </div>
             <div class="mb-3">
                 <label for="inputjenisextra" class="form-label">Jenis Extra</label> <br>

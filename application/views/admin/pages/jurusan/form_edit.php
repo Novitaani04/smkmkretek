@@ -5,12 +5,8 @@
                 <!-- <input type="number" class="form-control" name="id_jurusan"value="<?=$data_jurusan->id_jurusan?>" id="inputid_jurusan"> -->
             </div>
             <div class="mb-3">
-                <label for="inputNamaJurusan" class="form-label">Nama Jurusan</label> <br>
-                <select name="nama_jurusan" class="form-control">
-                    <option value="rpl">Rekayasa Perangkat Lunak</option>
-                    <option value="tbsm">Teknik Sepeda Motor</option>
-                    <option value="akuntansi">Akuntansi</option>
-                </select>
+            <label for="inputnama_jurusan" class="form-label">Nama Jurusan</label>
+                <input type="text" class="form-control" name="nama_jurusan" id="inputnama_jurusan">
             </div> 
    
             <div class="mb-3">

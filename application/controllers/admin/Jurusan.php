@@ -41,7 +41,7 @@ class Jurusan extends CI_Controller
         // menerima data formulir dari halaman form_add
           $data = $this->input->post();
     
-          $nmFile = $data['nama_jurusan'] . ".png";
+          $nmFile = $data['id_jurusan'] . ".png";
     
           // setting config uploadnya
           $config = [
@@ -118,7 +118,7 @@ class Jurusan extends CI_Controller
         // menerima data formulir dari halaman form_add
           $data = $this->input->post();
     
-          $nmFile = $data['nama_jurusan'] . ".png";
+          $nmFile = $data['id_jurusan'] . ".png";
     
           // setting config uploadnya
           $config = [
