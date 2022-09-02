@@ -26,7 +26,7 @@
                     <tr>
                         <td><?=$row->id_jurusan ?></td>
                         <td><?=$row->nama_jurusan ?></td>
-                        <td><img src="<?=base_url('foto/jurusan /') . $row->foto ?>" alt="<?=$row->foto?>"width="120"height="120"></td>
+                        <td><img src="<?=base_url('foto/jurusan/') . $row->foto ?>" alt="<?=$row->foto?>"width="120"height="120"></td>
                        
                         <td>
                             <a href="<?=base_url('admin/Jurusan/form_edit/') .$row->id_jurusan  ?>" class="btn btn-warning">Edit</a>

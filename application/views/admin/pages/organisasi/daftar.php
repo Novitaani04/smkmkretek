@@ -16,7 +16,7 @@
                 <thead>
                     <tr>
                         <th>Id Organisasi </th>
-                        <th>Nama  </th>
+                        <th>Nama Organisasi</th>
                         <th>Foto</th>
                         <th>Aksi</th>
                     </tr>

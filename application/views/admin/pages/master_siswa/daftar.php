@@ -30,7 +30,7 @@
                         <td><?=$row->nik?></td>
                         <td><?=$row->nama_siswa?></td>
                         <td><?=$row->jk?></td>
-                        <td><?=$row->jurusan?></td>
+                        <td><?=$row->nama_jurusan?></td>
                         <td><?=$row->alamat?></td>
                         <td><img src="<?=base_url('foto/images/') . $row->passfoto ?>" alt="<?=$row->passfoto?>"width="120"height="120"></td>
                         <td>

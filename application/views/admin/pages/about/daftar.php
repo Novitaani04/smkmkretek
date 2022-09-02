@@ -7,8 +7,11 @@
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Rekap master About</h6>
+        <?php
+            if ($this->db->count_all_results('about') == 0){
+        ?>
         <a href="<?=base_url('admin/About/form_add')?>"class="btn btn-primary mt-3"><i class="fa fa-plus"></i>Tambah data baru</a>
-
+       <?php }?>
     </div>
     <div class="card-body">
         <div class="table-responsive">

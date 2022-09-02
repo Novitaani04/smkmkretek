@@ -18,10 +18,16 @@
             </div> 
             <div class="mb-3">
                 <label for="inputJurusan" class="form-label">Jurusan</label> <br>
-                <select name="jurusan" class="form-control">
-                    <option value="rpl" <?=($data_siswa->jurusan == 'rpl') ?'selected': ''?>>Rekayasa Perangkat Lunak</option>
-                    <option value="tkj" <?=($data_siswa->jurusan == 'tkj') ?'selected': ''?>>Teknik Komputer Jaringan</option>
-                    <option value="akuntansi" <?=($data_siswa->jurusan == 'akuntansi') ?'selected': ''?>>Akuntansi</option>
+                <select name="id_jurusan" class="form-control">
+                    <?php
+                        $result=$this->JurusanModel->select_all_jurusan();
+                        foreach($result as $row){ 
+                    ?>
+                    <option value="<?= $row->id_jurusan?>" <?=$row->id_jurusan == $data_siswa->id_jurusan ? "selected" : ""?>><?= $row->nama_jurusan ?></option>
+                    
+                    <?php
+                        }
+                    ?>
                 </select>
             </div> 
             <div class="mb-3">

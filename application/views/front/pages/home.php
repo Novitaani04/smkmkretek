@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-lg-4 content-1-right pl-lg-5 mt-lg-0 mt-4">
                         <?= $value->misi ?>
-                       
+
                     </div>
                 <?php
                 endforeach;
@@ -111,10 +111,10 @@
                             <div class="card-body">
                                 <p class="card-text"><?= $value->deskripsi ?></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
+                                    <!-- <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                         <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
+                                    </div> -->
                                     <!-- <small class="text-muted">9 mins</small> -->
                                 </div>
                             </div>
@@ -207,27 +207,27 @@
                     <div class="col-lg-4 col-md-6 item">
                         <div style=" background: url(<?= base_url('foto/blog/') . $value->foto ?>) no-repeat center;background-size: 100%;width: 350px;height: 200px;" class="card">
                             <div class="card-header p-0 position-relative">
-                                <a href="blog-single.html">
-                                    <img class="card-img-bottom d-block radius-image-full" src="(<?= base_url('foto/blog/') . $value->foto ?>" alt="">
-                                </a>
+
+                                <img class="card-img-bottom d-block radius-image-full" src="(<?= base_url('foto/blog/') . $value->foto ?>" alt="">
+
                             </div>
-                            <div class="card-body blog-details">
-                                <a href="blog-single.html" class="blog-desc"><?= $value->judul ?>
-                                </a>
-                                <div class="author align-items-center">
-                                    <img src="<?= base_url('foto/blog/') . $value->foto ?>" alt="" class="img-fluid rounded-circle">
-                                    <ul class="blog-meta">
-                                        <!-- <li>
-                                        <a href="#">Isabella ava</a> 
-                                    </li> -->
-                                        <li class="meta-item blog-lesson">
-                                            <span class="meta-value"><?= $value->tanggal ?> </span>.
-                                            <!-- <span class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span> -->
-                                        </li>
-                                    </ul>
-                                </div>
+
+                        </div>
+                        <div class="card-body blog-details ">
+                            <h3 class="mb-2"><?= $value->judul ?></h3>
+                           
+                            <p class="mb-3"><?= $value->isi ?></p>
+                                
+                            <div class="author align-items-center">
+                                <img src="<?= base_url('foto/blog/') . $value->foto ?>" alt="" class="img-fluid rounded-circle">
+                                
+                                <li class="meta-item blog-lesson">
+                                    <span class="meta-value"><?= $value->tanggal ?> </span>.
+                                </li>
+                                </ul>
                             </div>
                         </div>
+                       
                     </div>
                 <?php
                 endforeach;
@@ -247,7 +247,7 @@
                         <!-- <span class="sub-title">Subscribe to our Newsletter</span> -->
                         <h3 class="hny-title text-left">Form Pendaftaran</h3>
                     </div>
-                    <form action="<?=base_url('admin/MasterSiswa/add_new_data_siswa')?>" method="post" class="signin-form mt-4 mb-2" enctype="multipart/form-data">
+                    <form action="<?= base_url('admin/MasterSiswa/add_new_data_siswa') ?>" method="post" class="signin-form mt-4 mb-2" enctype="multipart/form-data">
                         <div class="forms-gds">
 
                             <div class="row">
@@ -255,7 +255,7 @@
                                 <input class="mb-2" type="text" name="nama_siswa" placeholder="Nama Siswa" required />
                                 <select name="jk" class="form-control mb-2">
                                     <option value="l">Laki-Laki</option>
-                                    <option value="p">Perempuan</option>   
+                                    <option value="p">Perempuan</option>
                                 </select>
                                 <select name="jurusan" class="form-control mb-2">
                                     <option value="rpl">Rekayasa Perangkat Lunak</option>
@@ -264,7 +264,7 @@
                                 </select>
                                 <input class="mb-2" type="text" name="alamat" placeholder="Alamat" required />
                                 <input type="file" name="passfoto" class="form-control mb-2" id="inputPassFoto">
-   
+
                                 <button class="btn btn-style btn-primary">Daftar</button>
                             </div>
                         </div>

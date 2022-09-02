@@ -4,7 +4,7 @@
     {
         public function index()
         {
-            $data['page'] ="<h1>Dashboard</h1>"; 
+            $data['page'] = $this->load->view('admin/pages/dashboard/dashboard', null, true);
             $data['title'] = "Dashboard";
             $this->load->view('admin/partial/template',$data); 
         }

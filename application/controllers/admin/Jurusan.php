@@ -41,7 +41,7 @@ class Jurusan extends CI_Controller
         // menerima data formulir dari halaman form_add
           $data = $this->input->post();
     
-          $nmFile = $data['nama_jurusan'] . ".png";
+          $nmFile = $data['id_jurusan'] . ".png";
     
           // setting config uploadnya
           $config = [
@@ -71,7 +71,7 @@ class Jurusan extends CI_Controller
                   ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
-            $this->JurusanModel->editData($where,$column);
+            $this->JurusanModel->editData($where, $column);
               
               // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
               // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -118,7 +118,7 @@ class Jurusan extends CI_Controller
         // menerima data formulir dari halaman form_add
           $data = $this->input->post();
     
-          $nmFile = $data['nama_jurusan'] . ".png";
+          $nmFile = $data['id_jurusan'] . ".png";
     
           // setting config uploadnya
           $config = [

@@ -1,9 +1,8 @@
 <div class="container-fluit px-4">
 <form action="<?= base_url('admin/Carousell/add_new_data')?>" method="post" enctype="multipart/form-data">
-            <div class="mb-3">
-                <label for="inputid_carousell" class="form-label">Id Carousell</label>
-                <input type="number" class="form-control" name="id_carousell" id="inputid_carousell">
-            </div>
+        
+                <input type="number" class="form-control" name="id_carousell" id="inputid_carousell"hidden>
+           
             <div class="mb-3">
                 <label for="inputFoto" class="form-label">Foto</label>
                 <input type="file" name="foto" class="form-control" id="inputFoto">

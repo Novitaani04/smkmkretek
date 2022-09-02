@@ -78,7 +78,7 @@ class Guru extends CI_Controller
         "nip" => $data['nip'],
         ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $this->GuruModel->editData($column,$where);
+      $this->GuruModel->editData($where, $column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
@@ -103,8 +103,11 @@ class Guru extends CI_Controller
         "status_kepegawaian" => $data['status_kepegawaian'],
 
       ];
+      $where =[
+        "nip" => $data['nip'],
+        ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $this->GuruModel->editData($column);
+      $this->GuruModel->editData($where, $column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru

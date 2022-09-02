@@ -9,7 +9,7 @@ Author URL: http://w3layouts.com
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>DigitalEdu an Education Category Bootstrap Responsive Website Template - Home : W3Layouts</title>
+    <title>Smk muhammadiyah kretek</title>
     <!--/google-fonts-->
     <link href="//fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!--//google-fonts-->
@@ -84,13 +84,13 @@ Author URL: http://w3layouts.com
                 <p class="col-lg-8 copy-footer-29">© 2020 DigitalEdu. All rights reserved. Design by <a href="https://w3layouts.com/" target="_blank">
                         W3Layouts</a></p>
 
-                <div class="col-lg-4 footer-list-29">
+                <!-- <div class="col-lg-4 footer-list-29">
                     <ul class="d-flex text-lg-right justify-content-center mt-lg-0 mt-3">
                         <li><a href="#careers"> Careers</a></li>
                         <li class="mx-lg-5 mx-md-4 mx-3"><a href="#privacymy-lg-0 my-4">Privacy Policy</a></li>
                         <li><a href="contact.html">Contact us</a></li>
                     </ul>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -269,7 +269,7 @@ Author URL: http://w3layouts.com
     <!--bootstrap-->
     <script src="<?= base_url('assets/front_assets/') ?>js/bootstrap.min.js"></script>
     <!-- //bootstrap-->
-    
+
 </body>
 
 </html>

@@ -2,7 +2,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark stroke">
                 <h1><a class="navbar-brand" href="index.html">
-                        Smk M Kretek
+                        SMK M Kretek
                     </a></h1>
                 <!-- if logo is image enable this   
       <a class="navbar-brand" href="#index.html">

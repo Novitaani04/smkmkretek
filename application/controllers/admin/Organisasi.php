@@ -91,14 +91,14 @@ class Organisasi extends CI_Controller
     
             // $imageUpload = $this->upload->data();
             $column = [
-                "id_organisasi" => $data['id_organisasi'],
+                "id_organisasi" =>$data['id_organisasi'],
                 "nama" => $data['nama'],
 
             ];
   
     
               $where =[
-                  "id_organisasi" => $data['id_organisasi'],
+                  "id_organisasi" => $ata['id_organisasi'],
                   ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
