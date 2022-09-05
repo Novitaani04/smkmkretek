@@ -14,10 +14,7 @@
                                         <div class="banner-info-bg">
                                             <h5><?= $value->judul ?></h5>
                                             <p class="mt-4 pr-lg-4"><?= $value->deskripsi ?></p>
-                                            <!-- <a class="btn btn-style btn-primary mt-xl-5 mt-4 mr-2" href="about.html"> Get
-                                                Started <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                                            <a class="btn btn-style btn-white mt-xl-5 mt-4" href="services.html"> View
-                                                Courses <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -42,7 +39,6 @@
                 ?>
                     <div class="col-lg-4 content-1-left forms-25-info">
                         <div class="header-title">
-                            <!-- <span class="sub-title">About Us</span> -->
                             <h3 class="hny-title"><?= $value->judul ?></h3>
 
                         </div>
@@ -84,13 +80,13 @@
                                 </div>
                             </div>
                         </div>
+                        <p><?= $value->deskripsi ?>
+                        </p>
                     </div>
                 <?php
                 endforeach;
                 ?>
-                <div class="readhny-btm text-center mx-auto mt-md-4">
-                    <a class="btn btn-primary btn-style mt-md-5 mt-4" href="about.html">Read More <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-                </div>
+                
 
             </div>
         </div>
@@ -215,19 +211,19 @@
                         </div>
                         <div class="card-body blog-details ">
                             <h3 class="mb-2"><?= $value->judul ?></h3>
-                           
+
                             <p class="mb-3"><?= $value->isi ?></p>
-                                
+
                             <div class="author align-items-center">
                                 <img src="<?= base_url('foto/blog/') . $value->foto ?>" alt="" class="img-fluid rounded-circle">
-                                
+
                                 <li class="meta-item blog-lesson">
                                     <span class="meta-value"><?= $value->tanggal ?> </span>.
                                 </li>
                                 </ul>
                             </div>
                         </div>
-                       
+
                     </div>
                 <?php
                 endforeach;

@@ -20,10 +20,10 @@
             <div class="mb-3">
                 <label for="inputJurusan" class="form-label">Mapel</label> <br>
                 <select name="mapel" class="form-control">
-                    <option value="mtk"<?=($data_guru->mapel == 'mtk') ?'checked': ''?>>Matematika</option>
-                    <option value="b.indo"<?=($data_guru->mapel == 'b.indo') ?'checked': ''?>>Bahasa Indonesia</option>
-                    <option value="b.ing"<?=($data_guru->mapel == 'b.ing') ?'checked': ''?>>Bahasa Inggris</option>
-                    <option value="b.arab"<?=($data_guru->mapel == 'b.arab') ?'checked': ''?>>Bahasa Arab</option>
+                    <option value="MTK"<?=($data_guru->mapel == 'MTK') ?'checked': ''?>>Matematika</option>
+                    <option value="B.INDO"<?=($data_guru->mapel == 'B.INDO') ?'checked': ''?>>Bahasa Indonesia</option>
+                    <option value="B.ING"<?=($data_guru->mapel == 'B.ING') ?'checked': ''?>>Bahasa Inggris</option>
+                    <option value="B.ARAB"<?=($data_guru->mapel == 'B.ARAB') ?'checked': ''?>>Bahasa Arab</option>
                 </select>
             </div> 
             <div class="mb-3">

@@ -17,16 +17,8 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <nav class="mr-auto ml-lg-5">
-                        <div class="search-bar">
-                            <form class="search">
-                                <input type="search" class="search__input" name="search"
-                                    placeholder="Search for Courses.." onload="equalWidth()" required>
-                                <span class="fa fa-search search__icon"></span>
-                            </form>
-                        </div>
-                    </nav>
-                    <ul class="navbar-nav mr-auto">
+                    
+                    <ul class="navbar-nav mr-auto" style="margin-left:500px;">
                         <li class="nav-item <?=$active == 'home' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/Home')?>">Home <span class="sr-only">(current)</span></a>
                         </li>
