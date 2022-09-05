@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-lg-4 content-1-right pl-lg-5 mt-lg-0 mt-4">
                         <?= $value->misi ?>
-                       
+
                     </div>
                 <?php
                 endforeach;
@@ -211,23 +211,21 @@
                                     <img class="card-img-bottom d-block radius-image-full" src="(<?= base_url('foto/blog/') . $value->foto ?>" alt="">
                                 </a>
                             </div>
-                            <div class="card-body blog-details">
+                            <div class="card-body blog-details ">
                                 <a href="blog-single.html" class="blog-desc"><?= $value->judul ?>
                                 </a>
                                 <div class="author align-items-center">
                                     <img src="<?= base_url('foto/blog/') . $value->foto ?>" alt="" class="img-fluid rounded-circle">
-                                    <ul class="blog-meta">
-                                        <!-- <li>
-                                        <a href="#">Isabella ava</a> 
-                                    </li> -->
-                                        <li class="meta-item blog-lesson">
-                                            <span class="meta-value"><?= $value->tanggal ?> </span>.
-                                            <!-- <span class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span> -->
-                                        </li>
+
+                                    <li class="meta-item blog-lesson">
+                                        <span class="meta-value"><?= $value->tanggal ?> </span>.
+                                    </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+                        <li class="meta-item blog-details">
+                            <span class="meta-value "><span class="blog-desc"></span><?= $value->isi ?></span>
                     </div>
                 <?php
                 endforeach;
@@ -247,7 +245,7 @@
                         <!-- <span class="sub-title">Subscribe to our Newsletter</span> -->
                         <h3 class="hny-title text-left">Form Pendaftaran</h3>
                     </div>
-                    <form action="<?=base_url('admin/MasterSiswa/add_new_data_siswa')?>" method="post" class="signin-form mt-4 mb-2" enctype="multipart/form-data">
+                    <form action="<?= base_url('admin/MasterSiswa/add_new_data_siswa') ?>" method="post" class="signin-form mt-4 mb-2" enctype="multipart/form-data">
                         <div class="forms-gds">
 
                             <div class="row">
@@ -255,7 +253,7 @@
                                 <input class="mb-2" type="text" name="nama_siswa" placeholder="Nama Siswa" required />
                                 <select name="jk" class="form-control mb-2">
                                     <option value="l">Laki-Laki</option>
-                                    <option value="p">Perempuan</option>   
+                                    <option value="p">Perempuan</option>
                                 </select>
                                 <select name="jurusan" class="form-control mb-2">
                                     <option value="rpl">Rekayasa Perangkat Lunak</option>
@@ -264,7 +262,7 @@
                                 </select>
                                 <input class="mb-2" type="text" name="alamat" placeholder="Alamat" required />
                                 <input type="file" name="passfoto" class="form-control mb-2" id="inputPassFoto">
-   
+
                                 <button class="btn btn-style btn-primary">Daftar</button>
                             </div>
                         </div>
