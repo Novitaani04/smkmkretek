@@ -19,10 +19,10 @@
             <div class="mb-3">
                 <label for="inputJurusan" class="form-label">Mapel</label> <br>
                 <select name="mapel" class="form-control">
-                    <option value="mtk">Matematika</option>
-                    <option value="b.indo">Bahasa Indonesia</option>
-                    <option value="b.ing">Bahasa Inggris</option>
-                    <option value="b.arab">Bahasa Arab</option>
+                    <option value="MTK">Matematika</option>
+                    <option value="B.INDO">Bahasa Indonesia</option>
+                    <option value="B.ING">Bahasa Inggris</option>
+                    <option value="B.ARAB">Bahasa Arab</option>
                 </select>
             </div> 
             <div class="mb-3">

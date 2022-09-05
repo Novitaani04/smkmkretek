@@ -63,7 +63,7 @@ class Jurusan extends CI_Controller
                   "id_jurusan" => $data['id_jurusan'],
                   "nama_jurusan" => $data['nama_jurusan'],
                   "foto" => $imageUpload['file_name'],
-
+                  "deskripsi" => $data['deskripsi'],
               ];
     
               $where =[
@@ -71,7 +71,7 @@ class Jurusan extends CI_Controller
                   ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
-            $this->JurusanModel->editData($where,$column);
+            $this->JurusanModel->editData($where, $column);
               
               // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
               // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -93,6 +93,7 @@ class Jurusan extends CI_Controller
             $column = [
                 "id_jurusan" => $data['id_jurusan'],
                 "nama_jurusan" => $data['nama_jurusan'],
+                "deskripsi" => $data['deskripsi'],
 
             ];
               $where =[
@@ -139,7 +140,8 @@ class Jurusan extends CI_Controller
               $column = [
                 "id_jurusan" => $data['id_jurusan'],
                 "nama_jurusan" => $data['nama_jurusan'],
-                "foto" => $imageUpload['file_name']
+                "foto" => $imageUpload['file_name'],
+                "deskripsi" => $data['deskripsi'],
             ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
@@ -158,6 +160,7 @@ class Jurusan extends CI_Controller
             $column = [
                 "id_jurusan" => $data['id_jurusan'],
                 "nama_jurusan" => $data['nama_jurusan'],
+                "deskripsi" => $data['deskripsi'],
               ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel

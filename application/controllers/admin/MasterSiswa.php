@@ -63,7 +63,7 @@ class MasterSiswa extends CI_Controller
               "nik" => $data['nik'],
               "nama_siswa" => $data['nama_siswa'],
               "jk" => $data['jk'],
-              "jurusan" => $data['jurusan'],
+              "id_jurusan" => $data['id_jurusan'],
               "alamat" => $data['alamat'],
               "passfoto" => $imageUpload['file_name'] //ambil nama file dari gambar yang sudah di upload
           ];
@@ -88,7 +88,7 @@ class MasterSiswa extends CI_Controller
               "nik" => $data['nik'],
               "nama_siswa" => $data['nama_siswa'],
               "jk" => $data['jk'],
-              "jurusan" => $data['jurusan'],
+              "id_jurusan" => $data['id_jurusan'],
               "alamat" => $data['alamat'],
           ];
 
@@ -141,7 +141,7 @@ class MasterSiswa extends CI_Controller
         "nik" => $data['nik'],
         "nama_siswa" => $data['nama_siswa'],
         "jk" => $data['jk'],
-        "jurusan" => $data['jurusan'],
+        "id_jurusan" => $data['id_jurusan'],
         "alamat" => $data['alamat'],
         "passfoto" => $imageData['file_name'] //ambil nama file dari gambar yang sudah di upload
       ];
@@ -169,7 +169,7 @@ class MasterSiswa extends CI_Controller
         "nik" => $data['nik'],
         "nama_siswa" => $data['nama_siswa'],
         "jk" => $data['jk'],
-        "jurusan" => $data['jurusan'],
+        "id_jurusan" => $data['id_jurusan'],
         "alamat" => $data['alamat'],
         "passfoto" => "placeholder.jpg" //ambil nama file dari gambar yang sudah di upload
       ];
@@ -217,7 +217,7 @@ class MasterSiswa extends CI_Controller
         "nik" => $data['nik'],
         "nama_siswa" => $data['nama_siswa'],
         "jk" => $data['jk'],
-        "jurusan" => $data['jurusan'],
+        "id_jurusan" => $data['id_jurusan'],
         "alamat" => $data['alamat'],
         "passfoto" => $imageData['file_name'] //ambil nama file dari gambar yang sudah di upload
       ];
@@ -245,7 +245,7 @@ class MasterSiswa extends CI_Controller
         "nik" => $data['nik'],
         "nama_siswa" => $data['nama_siswa'],
         "jk" => $data['jk'],
-        "jurusan" => $data['jurusan'],
+        "id_jurusan" => $data['id_jurusan'],
         "alamat" => $data['alamat'],
         "passfoto" => "placeholder.jpg" //ambil nama file dari gambar yang sudah di upload
       ];

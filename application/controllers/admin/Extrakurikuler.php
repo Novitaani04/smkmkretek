@@ -71,7 +71,7 @@ class Extrakurikuler extends CI_Controller
                   ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
-              $insert = $this->ExtraModel->editData($where,$column);
+              $this->ExtraModel->editData($where,$column);
               
               // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
               // setelah itu pindah ke halaman utama pada controller MasterSiswa

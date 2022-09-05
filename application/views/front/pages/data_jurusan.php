@@ -20,13 +20,13 @@
                             </div>
                         </div>
                     </div>
+                    <p><?= $value->deskripsi ?>
+                    </p>
                 </div>
             <?php
             endforeach;
             ?>
-            <div class="readhny-btm text-center mx-auto mt-md-4">
-                <a class="btn btn-primary btn-style mt-md-5 mt-4" href="about.html">Read More <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-            </div>
+            
 
         </div>
     </div>
