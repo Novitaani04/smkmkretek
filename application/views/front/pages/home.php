@@ -135,16 +135,7 @@
                         <div class="card shadow-sm">
                             <img src="<?= base_url('foto/organisasi/') . $value->foto ?>" style="width:200px;height: 200px;">
                             <h2><?= $value->nama ?></h2>
-                            <!-- <div class="card-body">
-                            <p class="card-text"></p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div> -->
-                            <!-- <small class="text-muted">9 mins</small> -->
-                            <!-- </div> -->
-                            <!-- </div> -->
+                            
                         </div>
                     </div>
                 <?php
@@ -167,13 +158,14 @@
         <div class="new-block py-5">
             <div class="container py-lg-5">
                 <div class="history-info position-relative">
+                <h3 class="hny-title text-left mb-5">Organisasi</h3>
                     <!--//video-->
                     <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center pl-3">
                         <span class="video-play-icon">
                             <span class="fa fa-play"></span>
                         </span>
                     </a>
-
+                    
                     <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
                     <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
                         <iframe src="https://www.youtube.com/embed/dDeyzuvF0uk" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
