@@ -4,7 +4,7 @@
                 <input type="number" class="form-control" name="id_jurusan" id="inputid_jurusan"hidden>
             </div> 
             <div class="mb-3">
-                <label for="inputnama_jurusan" class="form-label">Nama jurusan</label>
+            <label for="inputnama_jurusan" class="form-label">Nama Jurusan</label>
                 <input type="text" class="form-control" name="nama_jurusan" id="inputnama_jurusan">
             </div> 
    
@@ -12,7 +12,10 @@
                 <label for="inputFoto" class="form-label">Foto</label>
                 <input type="file" name="foto" class="form-control" id="inputFoto">
             </div>
-
+            <div class="mb-3">
+            <label for="inputdeskripsi" class="form-label">Deskripsi</label>
+                <input type="text" class="form-control" name="deskripsi" id="inputdeskripsi">
+            </div> 
             <button type="submit" class="btn btn-primary">Submit</button> 
 </form>
 </div>
