@@ -1,13 +1,10 @@
 <header id="site-header" class="fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark stroke">
-                <h1><a class="navbar-brand" href="index.html">
+                <h1><a class="navbar-brand">
                         SMK M Kretek
                     </a></h1>
-                <!-- if logo is image enable this   
-      <a class="navbar-brand" href="#index.html">
-          <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-      </a> -->
+        
                 <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
                     data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -37,7 +34,7 @@
                 <!-- toggle switch for light and dark theme -->
 
                 <div class="mobile-position">
-                    <nav class="navigation">
+                    <!-- <nav class="navigation">
                         <div class="theme-switch-wrapper">
                             <label class="theme-switch" for="checkbox">
                                 <input type="checkbox" id="checkbox">
@@ -47,7 +44,7 @@
                                 </div>
                             </label>
                         </div>
-                    </nav>
+                    </nav> -->
                 </div>
                 <!-- //toggle switch for light and dark theme -->
             </nav>

@@ -12,9 +12,9 @@
                                 <div class="<?= $value->foto ?>">
                                     <div class="container">
                                         <div class="banner-info-bg">
-                                            <h5><?= $value->judul ?></h5>
+                                            <h5 style="-webkit-text-stroke: 1px black;"><?= $value->judul ?></h5>
                                             <p class="mt-4 pr-lg-4"><?= $value->deskripsi ?></p>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -62,7 +62,6 @@
     <div class="w3l-homeblog py-5" id="homeblog">
         <div class="container py-lg-5 py-md-4">
             <div class="header-title mb-3 mt-5">
-                <!-- <span class="sub-title">Top Courses</span> -->
                 <h3 class="hny-title text-left">Jurusan</h3>
             </div>
             <div class="row top-pics ">
@@ -73,20 +72,25 @@
                         <div style=" background: url(<?= base_url('foto/jurusan/') . $value->foto ?>) no-repeat center;background-size: contain;" class="top-pic1">
                             <div class="card-body blog-details">
                                 <!-- <p class="course-sub">283 online courses</p> -->
-                                <a href="services.html" class="blog-desc"><?= $value->nama_jurusan ?>
+                                <a href="" class="blog-desc"><?= $value->nama_jurusan ?>
                                 </a>
                                 <div class="author align-items-center">
                                     <img src="<?= base_url('foto/jurusan/') . $value->foto ?>" alt="" class="img-fluid rounded-circle">
                                 </div>
                             </div>
                         </div>
-                        <p><?= $value->deskripsi ?>
+                        <div class="card-body">
+                            <p class="card-text"><?= $value->deskripsi ?></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                            </div>
+                        </div>
+
                         </p>
                     </div>
                 <?php
                 endforeach;
                 ?>
-                
+
 
             </div>
         </div>
@@ -103,15 +107,11 @@
                     <div class="col">
                         <div class="card shadow-sm">
                             <img src="<?= base_url('foto/extra/') . $value->foto ?>" alt="">
-                            <h1><?= $value->jenis_extra ?></h1>
+                            <h2 style="margin-top: 10px;"><b><center><?= $value->jenis_extra ?></center>
+                                </b></h2>
                             <div class="card-body">
                                 <p class="card-text"><?= $value->deskripsi ?></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <!-- <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div> -->
-                                    <!-- <small class="text-muted">9 mins</small> -->
                                 </div>
                             </div>
                         </div>
@@ -126,6 +126,7 @@
     <!-- organisasi -->
     <div class="album py-5 bg-light">
         <div class="container">
+
             <h3 class="hny-title text-left mb-5">Organisasi</h3>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                 <?php
@@ -134,8 +135,14 @@
                     <div class="col">
                         <div class="card shadow-sm">
                             <img src="<?= base_url('foto/organisasi/') . $value->foto ?>" style="width:200px;height: 200px;">
-                            <h2><?= $value->nama ?></h2>
-                            
+                            <h2><b>
+                                    <center><?= $value->nama ?></center>
+                                </b></h2>
+                            <div class="card-body">
+                                <p class="card-text"><?= $value->deskripsi ?></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 <?php
@@ -155,17 +162,20 @@
     <!-- //stats -->
     <!-- home page video popup section -->
     <section class="w3l-videohny" id="video" style="background: url('http://i3.ytimg.com/vi/dDeyzuvF0uk/hqdefault.jpg') no-repeat center;">
-        <div class="new-block py-5">
+        <div class="new-block py-5 mb-5">
+
+
             <div class="container py-lg-5">
+                <h3 class="hny-title text-left mb-5">Video Profile</h3>
                 <div class="history-info position-relative">
-                <h3 class="hny-title text-left mb-5">Organisasi</h3>
+
                     <!--//video-->
                     <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center pl-3">
                         <span class="video-play-icon">
                             <span class="fa fa-play"></span>
                         </span>
                     </a>
-                    
+
                     <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
                     <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
                         <iframe src="https://www.youtube.com/embed/dDeyzuvF0uk" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -185,7 +195,7 @@
     <section class="w3l-blogpost-content py-5">
         <div class="container py-md-5">
             <div class="header-title mb-md-5 mt-5">
-                <!-- <span class="sub-title">Latest Posts</span> -->
+
                 <h3 class="hny-title text-left">Blog </h3>
             </div>
             <div class="row ">
@@ -236,19 +246,29 @@
                         <h3 class="hny-title text-left">Form Pendaftaran</h3>
                     </div>
                     <form action="<?= base_url('admin/MasterSiswa/add_new_data_siswa') ?>" method="post" class="signin-form mt-4 mb-2" enctype="multipart/form-data">
-                        <div class="forms-gds">
+                        <div class="">
 
                             <div class="row">
-                                <input class="mb-2" type="number" name="nik" placeholder="NIK" required />
+                                <input class="mb-2" type="text" name="nik" placeholder="NIK" required />
                                 <input class="mb-2" type="text" name="nama_siswa" placeholder="Nama Siswa" required />
                                 <select name="jk" class="form-control mb-2">
+                                    <option value="">--Pilih Jenis Kelamin--</option>
                                     <option value="l">Laki-Laki</option>
                                     <option value="p">Perempuan</option>
                                 </select>
-                                <select name="jurusan" class="form-control mb-2">
-                                    <option value="rpl">Rekayasa Perangkat Lunak</option>
-                                    <option value="akl">Akuntansi</option>
-                                    <option value="tbsm">Teknik Bisnis Sepeda Motor</option>
+                                <select name="id_jurusan" class="form-control mb-2">
+                                    <option value="">--Pilih Jurusan--</option>
+                                    <?php
+                                    $result = $this->JurusanModel->select_all_jurusan();
+                                    foreach ($result as $row) {
+
+
+                                    ?>
+                                        <option value="<?= $row->id_jurusan ?>"><?= $row->nama_jurusan ?></option>
+
+                                    <?php
+                                    }
+                                    ?>
                                 </select>
                                 <input class="mb-2" type="text" name="alamat" placeholder="Alamat" required />
                                 <input type="file" name="passfoto" class="form-control mb-2" id="inputPassFoto">

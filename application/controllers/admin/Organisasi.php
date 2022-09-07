@@ -63,11 +63,11 @@ class Organisasi extends CI_Controller
                   "id_organisasi" => $data['id_organisasi'],
                   "nama" => $data['nama'],
                   "foto" => $imageUpload['file_name'],
-
+                  "deskripsi" => $data['deskripsi']
               ];
     
               $where =[
-                  "id_organisasi" => $data['id_organisasi'],
+                  "id_organisasi" => $data['id_organisasi']
                   ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
@@ -82,23 +82,20 @@ class Organisasi extends CI_Controller
               </script>
               ";
           }else {
-            echo" 
-              <script>
-                console.log('".$this->upload->display_errors()."');
-              </script>
-            ";
+            
     
     
             // $imageUpload = $this->upload->data();
             $column = [
                 "id_organisasi" =>$data['id_organisasi'],
                 "nama" => $data['nama'],
+                "deskripsi" => $data['deskripsi']
 
             ];
   
     
               $where =[
-                  "id_organisasi" => $ata['id_organisasi'],
+                  "id_organisasi" => $data['id_organisasi']
                   ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
@@ -140,7 +137,8 @@ class Organisasi extends CI_Controller
               $column = [
                 "id_organisasi" => $data['id_organisasi'],
                 "nama" => $data['nama'],
-                "foto" => $imageUpload['file_name']
+                "foto" => $imageUpload['file_name'],
+                "deskripsi" => $data['deskripsi']
             ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel
@@ -159,6 +157,7 @@ class Organisasi extends CI_Controller
             $column = [
                 "id_organisasi" => $data['id_organisasi'],
                 "nama" => $data['nama'],
+                "deskripsi" => $data['deskripsi']
               ];
     
               // kirim data kolom ke insertData pada MasterSiswaModel

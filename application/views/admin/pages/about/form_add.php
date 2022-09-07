@@ -13,7 +13,7 @@
 
             <div class="mb-3">
                 <label for="inputmisi" class="form-label">Misi</label> <br>
-                <textarea name="misi" id="summernote" cols="30" rows="10" class="form-control"></textarea>
+                <textarea name="misi" id="summernote"cols="30" rows="10" class="form-control"></textarea>
             </div> 
             <button type="submit" class="btn btn-primary">Submit</button> 
 </form>

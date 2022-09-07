@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 01, 2022 at 11:49 AM
+-- Generation Time: Sep 07, 2022 at 03:22 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.5.38
 
@@ -38,7 +38,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id_about`, `judul`, `visi`, `misi`) VALUES
-(1, 'VISI DAN MISI', '"MEBENTUK GENERASI PEMBELAJAR YANG BERTAQWA,BERAKHLAQ MULIA,KREATIF DAN TERAMPIL,BERJIWA WIRAUSAHA,SIAP MENJADI KADER MUHAMMADIYAH DAN BANGSA SERTA SIAGA BENCANA"', '<ol><li>Menanamkan pola pikir belajar sepanjang hayat pada setiap kegiatan peserta didik</li><li><span style="font-size: 1rem;">Menambahkan nilai-nilai islami dan ulkarimah pada setiap perikehidupan peserta didik</span></li><li>Menumbuhkembangkan akhlak mulia pada proses pembelajaran dan pada kegiatan peserta didik </li><li>Memberikan bekal keterampilan sejalan dengan perkembangan ilmu pengetahuan dan teknologi serta tuntutan dunia kerja </li><li>Menjalin kerjasama dengan IDUKA untuk terciptanya link and match antara sekolah dengan IDUKA</li><li>Mengembangkan kegiatanyang menumbuhan kreativitasdan jiwa usaha peserta didik </li><li>Menanamkan jiwa nasionalisme  dalam semua kegiatan peserta didik </li><li>Memberikan kompetensi kebencanaan sebagai bekal bagi warga sekolah untuk antisipasi dan pengamanan ketika terjadi bencana </li></ol>');
+(3, 'Visi Dan Misi', ' "Membentuk generasi pembelajar yang Bertaqwa,Berakhlak Mulia,Kreatif Dan Terampi,Berjiwa Wirausaha,siap menjadi Kader MUHAMMADIYAH dan BANGSA serta siaga Bencana"', '<ol style="color: rgb(82, 82, 82); font-family: Nunito, sans-serif; background-color: rgb(248, 249, 250);"><li style="appearance: none; outline: none; list-style-type: none;">a.Menanamkan pola pikir belajar sepanjang hayat pada setiap kegiatan peserta didik</li><li style="appearance: none; outline: none; list-style-type: none;"><span style="appearance: none; outline: none; font-size: 1rem;">b.Menambahkan nilai-nilai islami dan ulkarimah pada setiap perikehidupan peserta didik.</span></li></ol>');
 
 -- --------------------------------------------------------
 
@@ -59,8 +59,8 @@ CREATE TABLE `blog` (
 --
 
 INSERT INTO `blog` (`id_blog`, `judul`, `foto`, `tanggal`, `isi`) VALUES
-(4, 'PPSB', 'PPSB.png', '2022-07-11', 'PPSB adalah penerimaan siswa baru yang di lakukan secara rutin oleh setiap tahun ajaran baru di smk mkretek'),
-(5, 'Laporan PTS', 'Laporan_PTS.png', '2022-07-19', 'Laporan PTS akhir tahun di sampaikan kepada orang tua siswa agar mengetahui kemampuan siswa');
+(4, 'PPSB ', 'PPSB.png', '2022-07-11', 'PPSB adalah penerimaan siswa baru yang di lakukan secara rutin oleh setiap tahun ajaran baru di smk muhammadiyah kretek'),
+(5, 'Laporan PTS SMK', 'Laporan_PTS.png', '2022-07-19', 'Laporan PTS akhir tahun di sampaikan kepada orang tua siswa agar mengetahui kemampuan siswa');
 
 -- --------------------------------------------------------
 
@@ -80,9 +80,9 @@ CREATE TABLE `carousell` (
 --
 
 INSERT INTO `carousell` (`id_carousell`, `foto`, `judul`, `deskripsi`) VALUES
-(13, '13.png', 'PSB', 'pendaftaran siswa baru'),
+(13, '13.png', 'PSB', 'Pendaftaran Siswa Baru'),
 (15, '15.png', 'Siap', 'Mengantarkan Menuju kesuksesan'),
-(16, '16.png', 'SMKMKRETEK', 'smk muhammadiyah kretek');
+(16, '16.png', 'SMK M KRETEK', 'SMK Muhammadiyah Kretek');
 
 -- --------------------------------------------------------
 
@@ -122,9 +122,9 @@ CREATE TABLE `extrakurikuler` (
 --
 
 INSERT INTO `extrakurikuler` (`id_extra`, `jenis_extra`, `foto`, `deskripsi`) VALUES
-(10, 'Tapak Suci', '10.png', 'HW adalah sistem pendidikan untuk anak, remaja, dan pemuda di luar lingkungan keluarga dan sekolah bersifat nasional, artinya ruang lingkup usaha HW meliputi seluruh wilayah Negara Kesatuan Repulik Indonesia.'),
+(10, 'HW', '10.png', 'HW adalah sistem pendidikan untuk anak, remaja, dan pemuda di luar lingkungan keluarga dan sekolah bersifat nasional, artinya ruang lingkup usaha HW meliputi seluruh wilayah Negara Kesatuan Repulik Indonesia.'),
 (11, 'Tapak Suci', '11.png', 'Tapak Suci Putera Muhammadiyah atau biasa kita kenal dengan sebutan Tapak Suci merupakan sebuah aliran beladiri yang berada di bawah naungan organisai Muhammadiyah. Yang merupakan salah satu dari organisasi islam terbesar yang berada di Indonesia.'),
-(14, 'Tilawah', '.png', 'Tilawah adalah salah satu istilah yang digunakan dalam mempelajari ilmu Al Quran. Secara umum, tilawah dikenal sebagai metode membaca ayat Al Quran dengan nada atau irama.');
+(14, 'Tilawah', '14.png', 'Tilawah adalah salah satu istilah yang digunakan dalam mempelajari ilmu Al Quran. Secara umum, tilawah dikenal sebagai metode membaca ayat Al Quran dengan nada atau irama.');
 
 -- --------------------------------------------------------
 
@@ -149,14 +149,14 @@ CREATE TABLE `guru` (
 --
 
 INSERT INTO `guru` (`nip`, `nama`, `tempat`, `tanggal_lahir`, `mapel`, `alamat`, `jk`, `status_kepegawaian`, `passfoto`) VALUES
-('009384', 'sari', 'bantul', '1998-05-13', 'mtk', 'pundong', 'P', 'pns', '009384.png'),
-('022345', 'jumadi', 'wonosari', '1986-03-03', 'mtk', 'wonosari', 'P', 'pns', '022345.png'),
-('0777895', 'Kastowo', 'wonogiri', '1879-02-18', 'b.arab', 'wonogiri', 'L', 'honorer', '0777895.png'),
-('089875678', 'Endah', 'bantul', '1990-03-31', 'mtk', 'kretek', 'P', 'pns', '089875678.png'),
-('0987890', 'Tiara', 'yogyakarta', '1987-11-04', 'mtk', 'serang', 'P', 'pns', '0987890.png'),
-('0987890654', 'Cahyo', 'bantul', '1890-05-11', 'b.ing', 'wonogiri', 'L', 'pns', '0987890654.png'),
-('19876567', 'Angga', 'sleman', '1987-08-17', 'mtk', 'sleman', 'L', 'pns', '19876567.png'),
-('23456', 'nurhayati', 'bantul', '1999-12-11', 'mtk', 'wonosari', 'P', 'honorer', '23456.png');
+('009384', 'Sari', 'bantul', '1998-05-13', 'MTK', 'pundong', 'P', 'pns', '009384.png'),
+('022345', 'Jumadi', 'wonosari', '1986-03-03', 'B.INDO', 'wonosari', 'L', 'pns', '022345.png'),
+('0777895', 'Kastowo', 'wonogiri', '1879-02-18', 'B.ARAB', 'wonogiri', 'L', 'honorer', '0777895.png'),
+('089875678', 'Endah', 'bantul', '1990-03-31', 'B.ARAB', 'kretek', 'P', 'pns', '089875678.png'),
+('0987890', 'Tiara', 'yogyakarta', '1987-11-04', 'B.INDO', 'serang', 'P', 'pns', '0987890.png'),
+('0987890654', 'Cahyo', 'bantul', '1890-05-11', 'B.ING', 'wonogiri', 'L', 'pns', '0987890654.png'),
+('19876567', 'Angga', 'sleman', '1987-08-17', 'B.ING', 'sleman', 'L', 'pns', '19876567.png'),
+('23456', 'Nurhayati', 'bantul', '1999-12-11', 'B.ING', 'wonosari', 'P', 'honorer', '23456.png');
 
 -- --------------------------------------------------------
 
@@ -167,17 +167,18 @@ INSERT INTO `guru` (`nip`, `nama`, `tempat`, `tanggal_lahir`, `mapel`, `alamat`,
 CREATE TABLE `jurusan` (
   `id_jurusan` int(11) NOT NULL,
   `nama_jurusan` varchar(50) NOT NULL,
-  `foto` varchar(50) NOT NULL
+  `foto` varchar(50) NOT NULL,
+  `deskripsi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `jurusan`
 --
 
-INSERT INTO `jurusan` (`id_jurusan`, `nama_jurusan`, `foto`) VALUES
-(7, 'akuntansi', 'akuntansi.png'),
-(8, 'rpl', 'rpl.png'),
-(9, 'tbsm', 'tbsm.png');
+INSERT INTO `jurusan` (`id_jurusan`, `nama_jurusan`, `foto`, `deskripsi`) VALUES
+(7, 'Akuntansi', '7.png', 'Akuntansi adalah proses pengidentifikasian, pengukuran, dan pelaporan informasi ekonomi untuk memungkinkan adanya penilaian dan pengambilan keputusan yang jelas dan tegas bagi pihak yang menggunakan informasi tersebut.'),
+(12, 'Rekayasa Perangkat Lunak', '12.png', 'Rekayasa Perangkat Lunak [RPL] atau software engineering adalah salah satu profesi yang mendalami cara mengembangkan perangkat lunak termasuk juga untuk pembuatan, pemeliharaan, manajemen organisasi pengembangan perangkat lunak serta manajemen kualitas.'),
+(13, 'TBSM', '.png', 'Teknik dan Bisnis Sepeda Motor (TBSM) adalah program keahlian yang mempelajari tentang kompetensi teknik otomotif yang menekankan pada keterampilan dan pelayanan jasa mekanik kendaraan sepeda motor. ');
 
 -- --------------------------------------------------------
 
@@ -218,8 +219,8 @@ CREATE TABLE `master_alumni` (
 --
 
 INSERT INTO `master_alumni` (`nama`, `foto`, `jk`, `angkatan`, `tahun_lulus`, `pekerjaan_sekarang`) VALUES
-('Novita ', 'Novita_.png', 'P', 2013, 2018, 'pengusaha'),
-('siwi', 'siwi.png', 'P', 2015, 2023, 'pengusaha');
+('Desi', 'Desi.png', 'P', 2016, 2022, 'karyawan'),
+('dewis', 'dewis.png', 'L', 2015, 2020, 'karyawan');
 
 -- --------------------------------------------------------
 
@@ -231,7 +232,7 @@ CREATE TABLE `master_siswa` (
   `nik` int(11) NOT NULL,
   `nama_siswa` varchar(100) NOT NULL,
   `jk` enum('L','P') NOT NULL,
-  `jurusan` varchar(50) NOT NULL,
+  `id_jurusan` int(11) NOT NULL,
   `alamat` text NOT NULL,
   `passfoto` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -240,12 +241,9 @@ CREATE TABLE `master_siswa` (
 -- Dumping data for table `master_siswa`
 --
 
-INSERT INTO `master_siswa` (`nik`, `nama_siswa`, `jk`, `jurusan`, `alamat`, `passfoto`) VALUES
-(423, 'asdasdasd', 'L', 'akl', 'Depok parangtritis', 'placeholder.jpg'),
-(12345, 'dimas bayu', 'L', 'tkj', 'surabaya', 'placeholder.jpg'),
-(23432, 'dewi', 'P', 'tbsm', 'watugajah', 'placeholder.jpg'),
-(23443, 'lisa', 'P', 'rpl', 'parangtritis', '23443.png'),
-(4124135, 'dimas ', 'L', 'tkj', 'bandung', '4124135.png');
+INSERT INTO `master_siswa` (`nik`, `nama_siswa`, `jk`, `id_jurusan`, `alamat`, `passfoto`) VALUES
+(9382874, 'dewi', 'P', 7, 'bandung', '09382874.png'),
+(94275342, 'dimas bayu', 'L', 12, 'soko', '94275342.png');
 
 -- --------------------------------------------------------
 
@@ -256,16 +254,17 @@ INSERT INTO `master_siswa` (`nik`, `nama_siswa`, `jk`, `jurusan`, `alamat`, `pas
 CREATE TABLE `organisasi` (
   `id_organisasi` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
-  `foto` text NOT NULL
+  `foto` text NOT NULL,
+  `deskripsi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `organisasi`
 --
 
-INSERT INTO `organisasi` (`id_organisasi`, `nama`, `foto`) VALUES
-(4, 'IPM', '4.png'),
-(6, 'PRM', '.png');
+INSERT INTO `organisasi` (`id_organisasi`, `nama`, `foto`, `deskripsi`) VALUES
+(4, 'IPM', '4.png', 'Ikatan Pelajar Muhammadiyah (IPM) adalah organisasi otonom Muhammadiyah yang merupakan gerakan Islam, dakwah amar ma''ruf nahi mungkar di kalangan pelajar, berakidah Islam dan bersumber pada Al-Qur''an dan Al-Sunnah.'),
+(6, 'PRM', '6.png', 'Pimpinan Ranting Muhammadiyah (PRM) Cabang ialah kesatuan Ranting dalam satu tempat di suatu tempat yang terdiri atas sekurang-kurangnya tiga Ranting');
 
 -- --------------------------------------------------------
 
@@ -285,10 +284,7 @@ CREATE TABLE `pesan` (
 --
 
 INSERT INTO `pesan` (`id_pesan`, `nama`, `email`, `pesan`) VALUES
-(1, 'Novita ', 'novitafit364@gmail.com', 'hhhhhhhhddd'),
-(0, 'ssd', 'dcsdc@gmail.com', 'adsd'),
-(0, 'Novita fitriani', 'novitafit364@gmail.com', 'dfdfdfs'),
-(0, 'Novita fitriani', 'novitafit364@gmail.com', 'kkkkkkk');
+(1, 'Novita ', 'novitafit364@gmail.com', 'deskripsi singkat');
 
 --
 -- Indexes for dumped tables
@@ -352,7 +348,8 @@ ALTER TABLE `master_alumni`
 -- Indexes for table `master_siswa`
 --
 ALTER TABLE `master_siswa`
-  ADD PRIMARY KEY (`nik`);
+  ADD PRIMARY KEY (`nik`),
+  ADD KEY `id_jurusan` (`id_jurusan`);
 
 --
 -- Indexes for table `organisasi`
@@ -368,7 +365,7 @@ ALTER TABLE `organisasi`
 -- AUTO_INCREMENT for table `about`
 --
 ALTER TABLE `about`
-  MODIFY `id_about` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_about` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `blog`
 --
@@ -393,7 +390,7 @@ ALTER TABLE `extrakurikuler`
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
-  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `login`
 --
@@ -404,6 +401,16 @@ ALTER TABLE `login`
 --
 ALTER TABLE `organisasi`
   MODIFY `id_organisasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `master_siswa`
+--
+ALTER TABLE `master_siswa`
+  ADD CONSTRAINT `master_siswa_ibfk_1` FOREIGN KEY (`id_jurusan`) REFERENCES `jurusan` (`id_jurusan`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

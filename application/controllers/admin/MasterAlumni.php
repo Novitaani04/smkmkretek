@@ -97,7 +97,7 @@
             "jk" => $data['jk'],
             "angkatan" => $data['angkatan'],
             "tahun_lulus" => $data['tahun_lulus'],
-            "pekerjaan_sekarang" => $data['pekerjaan_sekarang'],
+            "pekerjaan_sekarang" => $data['pekerjaan_sekarang']
           ];
 
           $where =[
@@ -146,7 +146,7 @@
               "jk" => $data['jk'],
               "angkatan" => $data['angkatan'],
               "tahun_lulus" => $data['tahun_lulus'],
-              "pekerjaan_sekarang" => $data['pekerjaan_sekarang'],
+              "pekerjaan_sekarang" => $data['pekerjaan_sekarang']
           
           ];
 
@@ -162,14 +162,13 @@
           </script>
           ";
       }else {
-        $imageUpload = $this->upload->data();
+
           $column = [
             "nama" => $data['nama'],
-            "foto" => "placeholder-foto.png",
             "jk" => $data['jk'],
             "angkatan" => $data['angkatan'],
             "tahun_lulus" => $data['tahun_lulus'],
-            "pekerjaan_sekarang" => $data['pekerjaan_sekarang'],
+            "pekerjaan_sekarang" => $data['pekerjaan_sekarang']
           ];
 
           // kirim data kolom ke insertData pada MasterSiswaModel

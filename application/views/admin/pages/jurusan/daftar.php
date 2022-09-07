@@ -3,6 +3,8 @@
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Master jurusan</h1>
 
+
+
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -24,6 +26,7 @@
                 </thead>
                     <tbody>
                         <?php foreach ($data as $row) :?>
+                            
                     <tr>
                         <td><?=$row->id_jurusan ?></td>
                         <td><?=$row->nama_jurusan ?></td>
@@ -31,7 +34,16 @@
                         <td><?=$row->deskripsi?></td>
                         <td>
                             <a href="<?=base_url('admin/Jurusan/form_edit/') .$row->id_jurusan  ?>" class="btn btn-warning">Edit</a>
+                            <?php
+                            $jumlah =$this->JurusanModel->checksiswa($row->id_jurusan);
+                            
+                            if($jumlah == 0){
+                      
+                            ?>
                             <a href="<?=base_url('admin/Jurusan/hapus/') .$row->id_jurusan  ?>" class="btn btn-danger"onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Hapus</a>
+                            <?php
+                                  }
+                            ?>
                         </td>   
                     </tr>
                    <?php endforeach; ?>

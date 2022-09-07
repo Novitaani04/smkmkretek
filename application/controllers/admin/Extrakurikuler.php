@@ -119,7 +119,8 @@ class Extrakurikuler extends CI_Controller
       {   
         // menerima data formulir dari halaman form_add
           $data = $this->input->post();
-    
+        
+
           $nmFile = $data['id_extra'] . ".png";
     
           // setting config uploadnya

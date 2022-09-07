@@ -47,5 +47,17 @@ class JurusanModel extends CI_Model
         $this->db->delete("jurusan");
         return $this->db->affected_rows();
     }
+    public function checksiswa($id_jurusan)
+
+    {
+      $where = [
+        "id_jurusan"=>$id_jurusan
+      ];
+      $this->db->select("*");
+      $this->db->where($where);
+      $this->db->from('master_siswa');
+      $query=$this->db->get();
+      return $query->num_rows();
+    }
 }
 ?>
