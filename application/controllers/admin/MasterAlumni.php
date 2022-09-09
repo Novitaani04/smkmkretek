@@ -59,6 +59,7 @@
           $imageUpload = $this->upload->data();
           // mempersiapkan data yang akan di isi pada table master_Alumni
           $column = [
+              "id_alumni" => null,
               "nama" => $data['nama'],
               "foto" => $imageUpload['file_name'],
               "jk" => $data['jk'],
@@ -69,12 +70,12 @@
           ];
 
           $where =[
-              "nama" => $data['nama'],
+              "id_alumni" => $data['id_alumni'],
               ];
 
           // kirim data kolom ke insertData pada MasterSiswaModel
           $this->MasterAlumniModel->editData($where,$column);
-          
+          // echo $this->db->last_query();
           // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
           // setelah itu pindah ke halaman utama pada controller MasterSiswa
           echo "
@@ -84,11 +85,7 @@
           </script>
           ";
       }else {
-        echo" 
-          <script>
-            console.log('".$this->upload->display_errors()."');
-          </script>
-        ";
+       
 
 
         // $imageUpload = $this->upload->data();
@@ -101,11 +98,13 @@
           ];
 
           $where =[
-              "nama" => $data['nama'],
+              "id_alumni" => $data['id_alumni'],
               ];
 
           // kirim data kolom ke insertData pada MasterSiswaModel
          $this->MasterAlumniModel->editData($where,$column);
+
+        //  echo $this->db->last_query();
           
           // jika sudah, tampilkan pesan data siswa berhasil ditambahkan
           // setelah itu pindah ke halaman utama pada controller MasterSiswa
@@ -122,7 +121,7 @@
     // menerima data formulir dari halaman form_add
       $data = $this->input->post();
 
-      $nmFile = $data['nama'] . ".png";
+      $nmFile = rand(1111,9999) . ".png";
 
       // setting config uploadnya
       $config = [
@@ -141,6 +140,7 @@
           $imageUpload = $this->upload->data();
           // mempersiapkan data yang akan di isi pada table master_siswa
           $column = [
+             "id_alumni"=> null,
               "nama" => $data['nama'],
               "foto" => $imageUpload['file_name'],
               "jk" => $data['jk'],
@@ -164,6 +164,7 @@
       }else {
 
           $column = [
+            "id_alumni"=>null,
             "nama" => $data['nama'],
             "jk" => $data['jk'],
             "angkatan" => $data['angkatan'],

@@ -8,6 +8,7 @@ class MasterSiswaModel extends CI_Model
         $this->db->select('*');
         // didalam table siswa
         $this->db->from('master_siswa');
+        // join digunakan untuk mengabungkan antara 2 table yang memiliki nama kolom yang sama
         $this->db->join('jurusan','jurusan.id_jurusan = master_siswa.id_jurusan');
         // ambil result datanya
         $query = $this->db->get();

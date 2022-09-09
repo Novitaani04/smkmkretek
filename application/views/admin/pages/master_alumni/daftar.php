@@ -15,6 +15,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
+                        <th>Id Alumni</th>
                         <th>Nama</th>
                         <th>Foto</th>
                         <th>Jenis Kelamin</th>
@@ -27,6 +28,7 @@
                     <tbody>
                         <?php foreach ($data as $row) :?>
                     <tr>
+                        <td><?=$row->id_alumni?></td>
                         <td><?=$row->nama?></td>
                         <td><img src="<?=base_url('foto/alumni/') . $row->foto ?>" alt="<?=$row->foto?>"width="120"height="120"></td>
                         <td><?=$row->jk?></td>

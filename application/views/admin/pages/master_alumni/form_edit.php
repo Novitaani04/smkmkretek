@@ -1,5 +1,6 @@
 <div class="container-fluit px-4">
 <form action="<?= base_url('admin/MasterAlumni/edit_data')?>" method="post" enctype="multipart/form-data">
+<input type="number" class="form-control" name="id_alumni"value="<?=$data_alumni->id_alumni?>" id="inputid_alumni" hidden>
             <div class="mb-3">
                 <label for="inputNama" class="form-label">Nama</label>
                 <input type="text" class="form-control" name="nama"value="<?=$data_alumni->nama?>" id="inputnama">
