@@ -81,8 +81,8 @@ Author URL: http://w3layouts.com
     <section class="w3l-copyright">
         <div class="container">
             <div class="row bottom-copies">
-                <p class="col-lg-8 copy-footer-29">© 2020 DigitalEdu. All rights reserved. Design by <a href="https://w3layouts.com/" target="_blank">
-                        W3Layouts</a></p>
+                <!-- <p class="col-lg-8 copy-footer-29">© 2020 DigitalEdu. All rights reserved. Design by <a href="https://w3layouts.com/" target="_blank">
+                        W3Layouts</a></p> -->
 
                 <!-- <div class="col-lg-4 footer-list-29">
                     <ul class="d-flex text-lg-right justify-content-center mt-lg-0 mt-3">

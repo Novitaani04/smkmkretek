@@ -22,6 +22,9 @@
                         <li class="nav-item <?=$active == 'guru' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/DataGuru')?>">Data Guru</a>
                         </li>
+                        <li class="nav-item <?=$active == 'alumni' ? 'active' : ''?>">
+                            <a class="nav-link" href="<?=base_url('front/DataAlumni')?>">Data Alumni</a>
+                        </li>
                         <li class="nav-item <?=$active == 'jurusan' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/DataJurusan')?>">Jurusan</a>
                         </li>

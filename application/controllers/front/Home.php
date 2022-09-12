@@ -4,6 +4,7 @@
     {
         public function index()
         {
+            $dataHome['data_video'] = $this->VideoModel->select_all_video();
             $dataHome['data_jurusan'] = $this->JurusanModel->select_all_jurusan();
             $dataHome['data_blog'] = $this->BlogModel->select_all_blog();
             $dataHome['data_extra'] = $this->ExtraModel->select_all_extra();

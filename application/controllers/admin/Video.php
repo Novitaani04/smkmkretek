@@ -1,14 +1,14 @@
 <?php
-class About extends CI_Controller
+class Video extends CI_Controller
 {
   public function index()
   {
     // memanggil semua data siswa
-    $dataAbout['data'] = $this->AboutModel->select_all_about();
+    $dataVideo['data'] = $this->VideoModel->select_all_video();
     // panggil file page daftar,kemudian kembalikan nilainya ke array page
-    $data['page'] = $this->load->view('admin/pages/about/daftar', $dataAbout, true);
+    $data['page'] = $this->load->view('admin/pages/video/daftar', $dataVideo, true);
     // atur judul
-    $data['title'] = "Master About";
+    $data['title'] = "Master Video";
     // kemudian tampilkan template beserta dengan datanya seperti : page.title   
     $this->load->view('admin/partial/template', $data);
   }
@@ -17,7 +17,7 @@ class About extends CI_Controller
 
   {
     // panggil file page daftar,kemudian kembalikan nilainya ke array page
-    $data['page'] = $this->load->view('admin/pages/about/form_add', null, true);
+    $data['page'] = $this->load->view('admin/pages/video/form_add', null, true);
     // atur judul
     $data['title'] = "Form Tambah ";
     // kemudian tampilkan template beserta dengan datanya seperti : page.title   
@@ -26,12 +26,12 @@ class About extends CI_Controller
 
   public function form_edit()
   {
-    $id_about=$this->uri->segment(4);
+    $id_video=$this->uri->segment(4);
     $where = [
-        "id_about"=> $id_about
+        "id_video"=> $id_video
     ];
-    $dataAbout['data_about'] = $this->AboutModel->select_about_by($where);
-    $data['page'] = $this->load->view('admin/pages/about/form_edit',$dataAbout,true);
+    $dataVideo['data_video'] = $this->VideoModel->select_video_by($where);
+    $data['page'] = $this->load->view('admin/pages/video/form_edit',$dataVideo,true);
     $data['title'] = "Form Edit";
     $this->load->view('admin/partial/template',$data);
     
@@ -42,21 +42,20 @@ class About extends CI_Controller
     $data = $this->input->post();
     
       $column = [
-        "id_about" => $data['id_about'],
-        "judul" => $data['judul'],
-        "visi" => $data['visi'],
-        "misi" => $data['misi']
+        "id_video" => $data['id_video'],
+        "judul_video" => $data['judul_video'],
        
+        
       ];
       // kirim data kolom ke insertData pada MasterguruModel
-      $this->AboutModel->insertData($column);
+ $this->VideoModel->insertData($column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
       echo "
              <script>
-                 alert('Data About berhasil ditambahkan')
-                 window.location.href = '" . base_url('admin/About/index') . "';
+                 alert('Data Video berhasil ditambahkan')
+                 window.location.href = '" . base_url('admin/Video/index') . "';
              </script>
              ";
   }
@@ -66,41 +65,41 @@ class About extends CI_Controller
     $data = $this->input->post();
     
       $column = [
-        "id_about" => $data['id_about'],
-        "judul" => $data['judul'],
-        "visi" => $data['visi'],
-        "misi" => $data['misi']
+        "id_video" => $data['id_video'],
+        "judul_video" => $data['judul_video'],
+      
+       
        
       ];
       $where =[
-        "id_about"=>$data['id_about']
+        "id_video"=>$data['id_video']
       ];
       
       // kirim data kolom ke insertData pada MasterguruModel
-      $insert = $this->AboutModel->editData($where, $column);
+       $this->VideoModel->editData($where, $column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
       echo "
              <script>
-                 alert('Data About berhasil diedit')
-                 window.location.href = '" . base_url('admin/About/index') . "';
+                 alert('Data Video berhasil diedit')
+                 window.location.href = '" . base_url('admin/Video/index') . "';
              </script>
              ";
   }
   public function hapus()
   {
     
-      $id_about = $this->uri->segment(4);
+      $id_video = $this->uri->segment(4);
      $where =[
-          "id_about"=> $id_about
+          "id_video"=> $id_video
      ];
      
-     $this->AboutModel->hapusData($where);
+     $this->VideoModel->hapusData($where);
      echo "
      <script>
-          alert('Data About berhasil dihapus')
-          window.location.href='",base_url('admin/About/index')."';
+          alert('Data Video berhasil dihapus')
+          window.location.href='",base_url('admin/Video/index')."';
      </script>
        ";
   }

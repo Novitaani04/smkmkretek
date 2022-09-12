@@ -1,7 +1,6 @@
     <!-- main-slider -->
     <section class="w3l-main-slider" id="home">
         <div class="companies20-content">
-
             <div class="owl-one owl-carousel owl-theme">
                 <?php
                 foreach ($data_carousell as $value) :
@@ -31,25 +30,20 @@
     <!-- /main-slider -->
     <!-- //banner section -->
     <!-- /content-1-->
-    <div class="content-1 py-5">
-        <div class="container py-md-5">
-            <div class="row content-1-grids">
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <!-- <h3 class="hny-title text-left mb-5">Extrakurikuler</h3> -->
+            <div class="row row-cols-1 row-cols-sm-6 row-cols-md-3 g-3">
                 <?php
                 foreach ($data_about as $value) :
                 ?>
-                    <div class="col-lg-4 content-1-left forms-25-info">
-                        <div class="header-title">
-                            <h3 class="hny-title"><?= $value->judul ?></h3>
-
-                        </div>
+                 <div class="col-lg-6 content-1-right pl-lg-5 mt-lg-0 mt-4">
+                        <h1><center>Visi</center></h1> <br>
+                        <p class=""><?= $value->visi ?></p>
                     </div>
-                    <div class="col-lg-4 content-1-right pl-lg-5 mt-lg-0 mt-4">
-                        <p class=""><?= $value->visi ?>
-                        </p>
-                    </div>
-                    <div class="col-lg-4 content-1-right pl-lg-5 mt-lg-0 mt-4">
-                        <?= $value->misi ?>
-
+                    <div class="col-lg-6 content-1-right pl-lg-5 mt-lg-0 mt-4">
+                        <h1><center>Misi</center></h1> <br>
+                        <p class=""><?= $value->misi ?></p>
                     </div>
                 <?php
                 endforeach;
@@ -107,7 +101,8 @@
                     <div class="col">
                         <div class="card shadow-sm">
                             <img src="<?= base_url('foto/extra/') . $value->foto ?>" alt="">
-                            <h2 style="margin-top: 10px;"><b><center><?= $value->jenis_extra ?></center>
+                            <h2 style="margin-top: 10px;"><b>
+                                    <center><?= $value->jenis_extra ?></center>
                                 </b></h2>
                             <div class="card-body">
                                 <p class="card-text"><?= $value->deskripsi ?></p>
@@ -139,7 +134,7 @@
                                     <center><?= $value->nama ?></center>
                                 </b></h2>
                             <div class="card-body">
-                                <p class="card-text"><?= $value->deskripsi ?></p>
+                                <p class="entry-excerpt excerpt card-text"><?= $value->deskripsi ?></p>
                                 <div class="d-flex justify-content-between align-items-center">
                                 </div>
                             </div>
@@ -152,7 +147,7 @@
         </div>
     </div>
     <!-- endorganisasi -->
-
+    
     <!-- //bottom-grids-->
 
     <!-- middle -->
@@ -168,7 +163,9 @@
             <div class="container py-lg-5">
                 <h3 class="hny-title text-left mb-5">Video Profile</h3>
                 <div class="history-info position-relative">
-
+                <?php
+                foreach ($data_video as $value) :
+                ?>
                     <!--//video-->
                     <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center pl-3">
                         <span class="video-play-icon">
@@ -178,15 +175,18 @@
 
                     <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
                     <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                        <iframe src="https://www.youtube.com/embed/dDeyzuvF0uk" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        <iframe src="<?= $value->judul_video ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                     </div>
                     <!--//video-->
                 </div>
 
                 <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
                 <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                    <iframe src="https://www.youtube.com/embed/dDeyzuvF0uk" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <iframe src="<?= $value->judul_video ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
+                <?php
+                endforeach;
+                ?>
             </div>
         </div>
     </section>
@@ -212,9 +212,9 @@
 
                         </div>
                         <div class="card-body blog-details ">
-                            <h3 class="mb-2"><?= $value->judul ?></h3>
+                            <h3 class=" mb-2"><?= $value->judul ?></h3>
 
-                            <p class="mb-3"><?= $value->isi ?></p>
+                            <p class="entry-excerpt excerpt mb-3"><?= $value->isi ?></p>
 
                             <div class="author align-items-center">
                                 <img src="<?= base_url('foto/blog/') . $value->foto ?>" alt="" class="img-fluid rounded-circle">
@@ -243,40 +243,12 @@
 
                     <div class="header-title mb-md-5 mt-4">
                         <!-- <span class="sub-title">Subscribe to our Newsletter</span> -->
-                        <h3 class="hny-title text-left">Form Pendaftaran</h3>
+                        <h3 class="hny-title text-left">Alamat</h3>
                     </div>
-                    <form action="<?= base_url('admin/MasterSiswa/add_new_data_siswa') ?>" method="post" class="signin-form mt-4 mb-2" enctype="multipart/form-data">
-                        <div class="">
+                    <div class="map-iframe">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3951.1685942794256!2d110.3133911!3d-7.9815179!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7b00130761f6d9%3A0x44559777792fcdf1!2sSmp%20Muhammadiyah%20Kretek!5e0!3m2!1sen!2sid!4v1661738256150!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                            <div class="row">
-                                <input class="mb-2" type="text" name="nik" placeholder="NIK" required />
-                                <input class="mb-2" type="text" name="nama_siswa" placeholder="Nama Siswa" required />
-                                <select name="jk" class="form-control mb-2">
-                                    <option value="">--Pilih Jenis Kelamin--</option>
-                                    <option value="l">Laki-Laki</option>
-                                    <option value="p">Perempuan</option>
-                                </select>
-                                <select name="id_jurusan" class="form-control mb-2">
-                                    <option value="">--Pilih Jurusan--</option>
-                                    <?php
-                                    $result = $this->JurusanModel->select_all_jurusan();
-                                    foreach ($result as $row) {
-
-
-                                    ?>
-                                        <option value="<?= $row->id_jurusan ?>"><?= $row->nama_jurusan ?></option>
-
-                                    <?php
-                                    }
-                                    ?>
-                                </select>
-                                <input class="mb-2" type="text" name="alamat" placeholder="Alamat" required />
-                                <input type="file" name="passfoto" class="form-control mb-2" id="inputPassFoto">
-
-                                <button class="btn btn-style btn-primary">Daftar</button>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

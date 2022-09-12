@@ -67,11 +67,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="map-iframe">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3951.1685942794256!2d110.3133911!3d-7.9815179!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7b00130761f6d9%3A0x44559777792fcdf1!2sSmp%20Muhammadiyah%20Kretek!5e0!3m2!1sen!2sid!4v1661738256150!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                       
-                </div>
+              
             <?php
                 endforeach;
             ?>
