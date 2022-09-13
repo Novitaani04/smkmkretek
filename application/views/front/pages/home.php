@@ -37,12 +37,16 @@
                 <?php
                 foreach ($data_about as $value) :
                 ?>
-                 <div class="col-lg-6 content-1-right pl-lg-5 mt-lg-0 mt-4">
-                        <h1><center>Visi</center></h1> <br>
+                    <div class="col-lg-6 content-1-right pl-lg-5 mt-lg-0 mt-4">
+                        <h1>
+                            <center>Visi</center>
+                        </h1> <br>
                         <p class=""><?= $value->visi ?></p>
                     </div>
                     <div class="col-lg-6 content-1-right pl-lg-5 mt-lg-0 mt-4">
-                        <h1><center>Misi</center></h1> <br>
+                        <h1>
+                            <center>Misi</center>
+                        </h1> <br>
                         <p class=""><?= $value->misi ?></p>
                     </div>
                 <?php
@@ -64,28 +68,24 @@
                 ?>
                     <div class="col-lg-3 col-md-6 mt-5">
                         <div style=" background: url(<?= base_url('foto/jurusan/') . $value->foto ?>) no-repeat center;background-size: contain;" class="top-pic1">
-                            <div class="card-body blog-details">
-                                <!-- <p class="course-sub">283 online courses</p> -->
-                                <a href="" class="blog-desc"><?= $value->nama_jurusan ?>
+                            <div class="card-body blog-details ">
+                                <a href="DataJurusan" class="blog-desc"><?= $value->nama_jurusan ?>
                                 </a>
                                 <div class="author align-items-center">
                                     <img src="<?= base_url('foto/jurusan/') . $value->foto ?>" alt="" class="img-fluid rounded-circle">
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <p class="card-text"><?= $value->deskripsi ?></p>
+                        <!-- <div class="card-body">
+                            <p class="card-text"></p>
                             <div class="d-flex justify-content-between align-items-center">
                             </div>
-                        </div>
-
+                        </div> -->
                         </p>
                     </div>
                 <?php
                 endforeach;
                 ?>
-
-
             </div>
         </div>
     </div>
@@ -147,7 +147,7 @@
         </div>
     </div>
     <!-- endorganisasi -->
-    
+
     <!-- //bottom-grids-->
 
     <!-- middle -->
@@ -163,37 +163,37 @@
             <div class="container py-lg-5">
                 <h3 class="hny-title text-left mb-5">Video Profile</h3>
                 <div class="history-info position-relative">
-                <?php
-                foreach ($data_video as $value) :
-                ?>
-                    <!--//video-->
-                    <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center pl-3">
-                        <span class="video-play-icon">
-                            <span class="fa fa-play"></span>
-                        </span>
-                    </a>
+                    <?php
+                    foreach ($data_video as $value) :
+                    ?>
+                        <!--//video-->
+                        <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center pl-3">
+                            <span class="video-play-icon">
+                                <span class="fa fa-play"></span>
+                            </span>
+                        </a>
 
-                    <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-                    <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                        <iframe src="<?= $value->judul_video ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                    <!--//video-->
+                        <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                        <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                            <iframe src="<?= $value->judul_video ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        </div>
+                        <!--//video-->
                 </div>
 
                 <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
                 <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
                     <iframe src="<?= $value->judul_video ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
-                <?php
-                endforeach;
-                ?>
+            <?php
+                    endforeach;
+            ?>
             </div>
         </div>
     </section>
     <!-- //home page video popup section -->
     <!--/blog-post-->
-    <section class="w3l-blogpost-content py-5">
-        <div class="container py-md-5">
+    <section class="w3l-blogpost-content py-3">
+        <div class="container py-md-3">
             <div class="header-title mb-md-5 mt-5">
 
                 <h3 class="hny-title text-left">Blog </h3>
@@ -212,10 +212,8 @@
 
                         </div>
                         <div class="card-body blog-details ">
-                            <h3 class=" mb-2"><?= $value->judul ?></h3>
-
-                            <p class="entry-excerpt excerpt mb-3"><?= $value->isi ?></p>
-
+                            <a href="<?= base_url('front/DataBlog/index/') . $value->id_blog?>" class="blog-desc"><?= $value->judul ?>
+                            </a>
                             <div class="author align-items-center">
                                 <img src="<?= base_url('foto/blog/') . $value->foto ?>" alt="" class="img-fluid rounded-circle">
 
@@ -231,13 +229,17 @@
                 endforeach;
                 ?>
             </div>
+            <!-- <div class="readhny-btm text-center mx-auto mt-md-4">
+                <a class="btn btn-primary btn-style mt-md-5 mt-4" href="DataBlog">Read More <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
+            </div> -->
         </div>
     </section>
+
     <!--//blog-posts-->
     <!--/w3l-newsletter-->
     <section class="w3l-newsletter">
         <!-- /form-25-section -->
-        <div class="form-25-main py-5">
+        <div class="form-25-main py-3">
             <div class="container py-lg-5">
                 <div class="forms-25-info">
 

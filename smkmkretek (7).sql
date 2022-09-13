@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2022 at 03:22 AM
+-- Generation Time: Sep 12, 2022 at 03:54 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.5.38
 
@@ -38,7 +38,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id_about`, `judul`, `visi`, `misi`) VALUES
-(3, 'Visi Dan Misi', ' "Membentuk generasi pembelajar yang Bertaqwa,Berakhlak Mulia,Kreatif Dan Terampi,Berjiwa Wirausaha,siap menjadi Kader MUHAMMADIYAH dan BANGSA serta siaga Bencana"', '<ol style="color: rgb(82, 82, 82); font-family: Nunito, sans-serif; background-color: rgb(248, 249, 250);"><li style="appearance: none; outline: none; list-style-type: none;">a.Menanamkan pola pikir belajar sepanjang hayat pada setiap kegiatan peserta didik</li><li style="appearance: none; outline: none; list-style-type: none;"><span style="appearance: none; outline: none; font-size: 1rem;">b.Menambahkan nilai-nilai islami dan ulkarimah pada setiap perikehidupan peserta didik.</span></li></ol>');
+(7, 'Visi Dan Misi', '"Membentuk generasi pembelajar yang Bertaqwa,Berakhlak Mulia,Kreatif Dan Terampi,Berjiwa Wirausaha,siap menjadi Kader MUHAMMADIYAH dan BANGSA serta siaga Bencana"', '<p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; font-size: 17px; line-height: 28px; color: rgb(82, 82, 82); font-family: Nunito, sans-serif; background-color: rgb(248, 249, 250);">a.Menanamkan pola pikir belajar sepanjang hayat pada setiap kegiatan peserta didik</p><p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; font-size: 17px; line-height: 28px; color: rgb(82, 82, 82); font-family: Nunito, sans-serif; background-color: rgb(248, 249, 250);">b.Menambahkan nilai-nilai islami dan ulkarimah pada setiap perikehidupan peserta didik.</p>');
 
 -- --------------------------------------------------------
 
@@ -206,6 +206,7 @@ INSERT INTO `login` (`id_login`, `username`, `password`) VALUES
 --
 
 CREATE TABLE `master_alumni` (
+  `id_alumni` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `foto` varchar(100) NOT NULL,
   `jk` enum('L','P') NOT NULL,
@@ -218,9 +219,10 @@ CREATE TABLE `master_alumni` (
 -- Dumping data for table `master_alumni`
 --
 
-INSERT INTO `master_alumni` (`nama`, `foto`, `jk`, `angkatan`, `tahun_lulus`, `pekerjaan_sekarang`) VALUES
-('Desi', 'Desi.png', 'P', 2016, 2022, 'karyawan'),
-('dewis', 'dewis.png', 'L', 2015, 2020, 'karyawan');
+INSERT INTO `master_alumni` (`id_alumni`, `nama`, `foto`, `jk`, `angkatan`, `tahun_lulus`, `pekerjaan_sekarang`) VALUES
+(1221, 'Desi', 'Desi.png', 'P', 2016, 2022, 'karyawan'),
+(1222, 'joko', 'dewis.png', 'L', 2015, 2020, 'karyawan'),
+(1223, 'darma', '8064.png', 'L', 2015, 2020, 'pengusaha');
 
 -- --------------------------------------------------------
 
@@ -286,6 +288,24 @@ CREATE TABLE `pesan` (
 INSERT INTO `pesan` (`id_pesan`, `nama`, `email`, `pesan`) VALUES
 (1, 'Novita ', 'novitafit364@gmail.com', 'deskripsi singkat');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `video`
+--
+
+CREATE TABLE `video` (
+  `id_video` int(11) NOT NULL,
+  `judul_video` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `video`
+--
+
+INSERT INTO `video` (`id_video`, `judul_video`) VALUES
+(1, 'https://www.youtube.com/embed/dDeyzuvF0uk');
+
 --
 -- Indexes for dumped tables
 --
@@ -342,7 +362,7 @@ ALTER TABLE `login`
 -- Indexes for table `master_alumni`
 --
 ALTER TABLE `master_alumni`
-  ADD PRIMARY KEY (`nama`);
+  ADD PRIMARY KEY (`id_alumni`);
 
 --
 -- Indexes for table `master_siswa`
@@ -358,6 +378,12 @@ ALTER TABLE `organisasi`
   ADD PRIMARY KEY (`id_organisasi`);
 
 --
+-- Indexes for table `video`
+--
+ALTER TABLE `video`
+  ADD PRIMARY KEY (`id_video`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -365,7 +391,7 @@ ALTER TABLE `organisasi`
 -- AUTO_INCREMENT for table `about`
 --
 ALTER TABLE `about`
-  MODIFY `id_about` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_about` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `blog`
 --
@@ -397,10 +423,20 @@ ALTER TABLE `jurusan`
 ALTER TABLE `login`
   MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `master_alumni`
+--
+ALTER TABLE `master_alumni`
+  MODIFY `id_alumni` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1224;
+--
 -- AUTO_INCREMENT for table `organisasi`
 --
 ALTER TABLE `organisasi`
   MODIFY `id_organisasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `video`
+--
+ALTER TABLE `video`
+  MODIFY `id_video` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --

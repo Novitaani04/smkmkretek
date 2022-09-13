@@ -44,6 +44,7 @@ class Video extends CI_Controller
       $column = [
         "id_video" => $data['id_video'],
         "judul_video" => $data['judul_video'],
+        "background" => $data['background']
        
         
       ];
@@ -67,6 +68,7 @@ class Video extends CI_Controller
       $column = [
         "id_video" => $data['id_video'],
         "judul_video" => $data['judul_video'],
+        "background" => $data['background'],
       
        
        

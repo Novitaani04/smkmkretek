@@ -19,7 +19,7 @@
                             <ul class="blog-meta">
                                 <ul class="blog-meta">
                                     <li class="meta-item blog-lesson">
-                                        <!-- <span class="meta-value"></span>. -->
+                                        <span class="meta-value"><?=$value->angkatan?>-<?=$value->tahun_lulus?></span>.
                                         <!-- <span class="meta-value text-bold">$89.00</span> -->
                                     </li>
                                 </ul>

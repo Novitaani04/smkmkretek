@@ -18,6 +18,7 @@
                     <tr>
                         <th>Id Video</th>
                         <th>Judul Video</th>
+                        <th>Background</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -26,8 +27,7 @@
                     <tr>
                         <td><?=$row->id_video?></td>
                         <td><?=$row->judul_video?></td>
-                      
-
+                        <td><?=$row->background?></td>
                         <td>
                             <a href="<?=base_url('admin/Video/form_edit/') .$row->id_video?>" class="btn btn-warning">Edit</a>
                             <a href="<?=base_url('admin/Video/hapus/') .$row->id_video?>" class="btn btn-danger"onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Hapus</a>

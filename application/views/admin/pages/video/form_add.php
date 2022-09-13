@@ -7,6 +7,10 @@
                 <label for="inputJudul_video" class="form-label">Judul Video</label>
                 <input type="text" class="form-control" name="judul_video" id="inputJudul_video">
             </div>
+            <div class="mb-3">
+                <label for="inputbackground" class="form-label">Background</label>
+                <input type="text" class="form-control" name="background" id="inputbackground">
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button> 
 </form>
 </div>
