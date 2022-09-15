@@ -2,7 +2,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?=base_url('admin/Dashboard')?>">
                 <div class="sidebar-brand-text mx-3">Halaman Admin</div>
             </a>
 
@@ -85,7 +85,7 @@
             <!-- Nav Item - Master Siswa -->
             <li class="nav-item">
                 <a class="nav-link" href="<?=base_url('admin/Video')?>">
-                <i class="fas fa-cat"></i>
+                <i class="fas fa-video"></i>
                     <span>Video</span></a>
             </li>
 

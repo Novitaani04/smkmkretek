@@ -31,7 +31,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->db->count_all_results('master_alumni') ?></div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fas fa-user fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>

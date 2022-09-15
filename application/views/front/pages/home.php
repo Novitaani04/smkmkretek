@@ -156,17 +156,15 @@
 
     <!-- //stats -->
     <!-- home page video popup section -->
-    <section class="w3l-videohny" id="video" style="background: url('http://i3.ytimg.com/vi/dDeyzuvF0uk/hqdefault.jpg') no-repeat center;">
-        <div class="new-block py-5 mb-5">
-
-
+    <section class="w3l-videohny" id="video" style="  background: url('http://i3.ytimg.com/vi/dDeyzuvF0uk/hqdefault.jpg' ) no-repeat center;">
+        <div class="new-block py-5">
             <div class="container py-lg-5">
-                <h3 class="hny-title text-left mb-5">Video Profile</h3>
                 <div class="history-info position-relative">
                     <?php
                     foreach ($data_video as $value) :
                     ?>
                         <!--//video-->
+
                         <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center pl-3">
                             <span class="video-play-icon">
                                 <span class="fa fa-play"></span>
@@ -184,12 +182,13 @@
                 <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
                     <iframe src="<?= $value->judul_video ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
-            <?php
-                    endforeach;
-            ?>
             </div>
+                 <?php
+                    endforeach
+                 ?>
         </div>
-    </section>
+
+    </section> 
     <!-- //home page video popup section -->
     <!--/blog-post-->
     <section class="w3l-blogpost-content py-3">
@@ -203,7 +202,7 @@
                 foreach ($data_blog as $value) :
                 ?>
                     <div class="col-lg-4 col-md-6 item">
-                        <div style=" background: url(<?= base_url('foto/blog/') . $value->foto ?>) no-repeat center;background-size: 100%;width: 350px;height: 200px;" class="card">
+                                      <div style=" background: url(<?= base_url('foto/blog/') . $value->foto ?>) no-repeat center;background-size: 100%;width: 350px;height: 200px;" class="card">
                             <div class="card-header p-0 position-relative">
 
                                 <img class="card-img-bottom d-block radius-image-full" src="(<?= base_url('foto/blog/') . $value->foto ?>" alt="">
@@ -212,7 +211,7 @@
 
                         </div>
                         <div class="card-body blog-details ">
-                            <a href="<?= base_url('front/DataBlog/index/') . $value->id_blog?>" class="blog-desc"><?= $value->judul ?>
+                            <a href="<?= base_url('front/DataBlog/index/') . $value->id_blog ?>" class="blog-desc"><?= $value->judul ?>
                             </a>
                             <div class="author align-items-center">
                                 <img src="<?= base_url('foto/blog/') . $value->foto ?>" alt="" class="img-fluid rounded-circle">
@@ -229,9 +228,7 @@
                 endforeach;
                 ?>
             </div>
-            <!-- <div class="readhny-btm text-center mx-auto mt-md-4">
-                <a class="btn btn-primary btn-style mt-md-5 mt-4" href="DataBlog">Read More <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
-            </div> -->
+           
         </div>
     </section>
 
@@ -259,3 +256,6 @@
     <!-- testimonials -->
 
     <!-- //testimonials -->
+     <!-- <div class="readhny-btm text-center mx-auto mt-md-4">
+                <a class="btn btn-primary btn-style mt-md-5 mt-4" href="DataBlog">Read More <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
+            </div> -->
