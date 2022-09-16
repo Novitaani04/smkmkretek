@@ -15,7 +15,7 @@ Author URL: http://w3layouts.com
     <!--//google-fonts-->
     <!-- Template CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/front_assets/') ?>css/style-starter.css">
-
+    <link rel="stylesheet" href="<?=base_url('assets/front_assets/css/gallery.css')?>"/>
 </head>
 
 <body>
@@ -122,7 +122,7 @@ Author URL: http://w3layouts.com
         <!-- /move top -->
     </section>
     <!-- //copyright -->
-
+    <script src="<?=base_url('assets/front_assets/js/gallery.js')?>"></script>
     <script src="<?= base_url('assets/front_assets/') ?>js/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
 
     <script src="<?= base_url('assets/front_assets/') ?>js/theme-change.js"></script><!-- theme switch js (light and dark)-->

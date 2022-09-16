@@ -183,12 +183,11 @@
                     <iframe src="<?= $value->judul_video ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
-                 <?php
-                    endforeach
-                 ?>
+        <?php
+                    endforeach;
+        ?>
         </div>
-
-    </section> 
+    </section>
     <!-- //home page video popup section -->
     <!--/blog-post-->
     <section class="w3l-blogpost-content py-3">
@@ -202,11 +201,9 @@
                 foreach ($data_blog as $value) :
                 ?>
                     <div class="col-lg-4 col-md-6 item">
-                                      <div style=" background: url(<?= base_url('foto/blog/') . $value->foto ?>) no-repeat center;background-size: 100%;width: 350px;height: 200px;" class="card">
+                        <div style=" background: url(<?= base_url('foto/blog/') . $value->foto ?>) no-repeat center;background-size: 100%;width: 350px;height: 200px;" class="card">
                             <div class="card-header p-0 position-relative">
-
                                 <img class="card-img-bottom d-block radius-image-full" src="(<?= base_url('foto/blog/') . $value->foto ?>" alt="">
-
                             </div>
 
                         </div>
@@ -228,7 +225,6 @@
                 endforeach;
                 ?>
             </div>
-           
         </div>
     </section>
 
@@ -256,6 +252,6 @@
     <!-- testimonials -->
 
     <!-- //testimonials -->
-     <!-- <div class="readhny-btm text-center mx-auto mt-md-4">
+    <!-- <div class="readhny-btm text-center mx-auto mt-md-4">
                 <a class="btn btn-primary btn-style mt-md-5 mt-4" href="DataBlog">Read More <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
             </div> -->

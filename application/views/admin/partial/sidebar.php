@@ -88,6 +88,12 @@
                 <i class="fas fa-video"></i>
                     <span>Video</span></a>
             </li>
+            <!-- Nav Item - Master Siswa -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?=base_url('admin/Gallery')?>">
+                <i class="fas fa-images"></i>
+                    <span>Gallery</span></a>
+            </li>
 
     
             <!-- Sidebar Toggler (Sidebar) -->

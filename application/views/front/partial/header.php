@@ -15,7 +15,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     
-                    <ul class="navbar-nav mr-auto" style="margin-left:400px;">
+                    <ul class="navbar-nav mr-auto" style="margin-left:300px;">
                         <li class="nav-item <?=$active == 'home' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/Home')?>">Home <span class="sr-only">(current)</span></a>
                         </li>
@@ -27,6 +27,9 @@
                         </li>
                         <li class="nav-item <?=$active == 'jurusan' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/DataJurusan')?>">Jurusan</a>
+                        </li>
+                        <li class="nav-item <?=$active == 'gallery' ? 'active' : ''?>">
+                            <a class="nav-link" href="<?=base_url('front/Gallery')?>">Gallery</a>
                         </li>
                        
                         <li class="nav-item <?=$active == 'contact' ? 'active' : ''?>">
