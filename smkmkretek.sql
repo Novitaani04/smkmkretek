@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2022 at 03:54 PM
+-- Generation Time: Sep 19, 2022 at 11:43 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.5.38
 
@@ -38,7 +38,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id_about`, `judul`, `visi`, `misi`) VALUES
-(7, 'Visi Dan Misi', '"Membentuk generasi pembelajar yang Bertaqwa,Berakhlak Mulia,Kreatif Dan Terampi,Berjiwa Wirausaha,siap menjadi Kader MUHAMMADIYAH dan BANGSA serta siaga Bencana"', '<p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; font-size: 17px; line-height: 28px; color: rgb(82, 82, 82); font-family: Nunito, sans-serif; background-color: rgb(248, 249, 250);">a.Menanamkan pola pikir belajar sepanjang hayat pada setiap kegiatan peserta didik</p><p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; font-size: 17px; line-height: 28px; color: rgb(82, 82, 82); font-family: Nunito, sans-serif; background-color: rgb(248, 249, 250);">b.Menambahkan nilai-nilai islami dan ulkarimah pada setiap perikehidupan peserta didik.</p>');
+(7, 'Visi Dan Misi', '"Membentuk generasi pembelajar yang Bertaqwa,Berakhlak Mulia,Kreatif Dan Terampi,Berjiwa Wirausaha,siap menjadi Kader MUHAMMADIYAH dan BANGSA serta siaga Bencana"', '<p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; font-size: 17px; line-height: 28px; color: rgb(82, 82, 82); font-family: Nunito, sans-serif; background-color: rgb(248, 249, 250);">a.Menanamkan pola pikir belajar sepanjang hayat pada setiap kegiatan peserta didik</p><p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; font-size: 17px; line-height: 28px; color: rgb(82, 82, 82); font-family: Nunito, sans-serif; background-color: rgb(248, 249, 250);">b.Menambahkan nilai-nilai islami dan ulkarimah pada setiap perikehidupan peserta didik.</p><p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; font-size: 17px; line-height: 28px; color: rgb(82, 82, 82); font-family: Nunito, sans-serif; background-color: rgb(248, 249, 250);"><br></p>');
 
 -- --------------------------------------------------------
 
@@ -60,7 +60,7 @@ CREATE TABLE `blog` (
 
 INSERT INTO `blog` (`id_blog`, `judul`, `foto`, `tanggal`, `isi`) VALUES
 (4, 'PPSB ', 'PPSB.png', '2022-07-11', 'PPSB adalah penerimaan siswa baru yang di lakukan secara rutin oleh setiap tahun ajaran baru di smk muhammadiyah kretek'),
-(5, 'Laporan PTS SMK', 'Laporan_PTS.png', '2022-07-19', 'Laporan PTS akhir tahun di sampaikan kepada orang tua siswa agar mengetahui kemampuan siswa');
+(5, 'Laporan PTS SMK', 'Laporan_PTS.png', '2022-07-19', 'Penilaian Tengah Semester (PTS) adalah salah satu agenda untuk melakukan penilaian, sehingga dengannya Bapak/Ibu Guru bisa mengukur kemampuan siswa di bidang akademik.  Begitupun di SMK Muhammadiyah Kretek.\r\n\r\nBeberapa waktu yang lalu, telah dilaksanakan PTS.  PTS tersebut diikuti oleh seluruh siswa kelas X dan XI secara semi online.  Saat pandemi covid-19 yang dimana kita menerapkan 5M, yaitu menjaga jarak, mencuci tangan pakai sabun, memakai masker, mengurangi mobilitas, mengurangi kerumunan maka PTS semi online menjadi salah satu solusi.\r\n\r\nPTS telah selesai, maka hasilnya pun di bagikan ke pada para orang tua/wali murid.  Dengan menerapkan prokes, telah dilaksanakan pelaporan tersebut.  Disamping itu pula, ada pembinaan dan informasi sekolah.\r\n\r\nSaat pandemi seperti ini, mungkin semangat belajar ada yang turun, namun juga ada yang tetap bersemangat.  Maka ingatlah pesan Rasul SAW, Barangsiapa yang mudahkan jalannya untuk menuntut ilmu, maka Allah akan mudahkan jalannya ke surga, dengan begitu kita akan bersemangat lagi.');
 
 -- --------------------------------------------------------
 
@@ -129,6 +129,27 @@ INSERT INTO `extrakurikuler` (`id_extra`, `jenis_extra`, `foto`, `deskripsi`) VA
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id_gallery` int(11) NOT NULL,
+  `judul` varchar(50) NOT NULL,
+  `foto` text NOT NULL,
+  `deskripsi` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id_gallery`, `judul`, `foto`, `deskripsi`) VALUES
+(2, 'Praktik sepeda motor', '.png', 'Praktik yang dilakukan oleh kelas  Xll TBSM'),
+(4, 'Membuat website', '4.png', 'Siswa kelas Xll RPl sedang membuat website');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `guru`
 --
 
@@ -154,7 +175,7 @@ INSERT INTO `guru` (`nip`, `nama`, `tempat`, `tanggal_lahir`, `mapel`, `alamat`,
 ('0777895', 'Kastowo', 'wonogiri', '1879-02-18', 'B.ARAB', 'wonogiri', 'L', 'honorer', '0777895.png'),
 ('089875678', 'Endah', 'bantul', '1990-03-31', 'B.ARAB', 'kretek', 'P', 'pns', '089875678.png'),
 ('0987890', 'Tiara', 'yogyakarta', '1987-11-04', 'B.INDO', 'serang', 'P', 'pns', '0987890.png'),
-('0987890654', 'Cahyo', 'bantul', '1890-05-11', 'B.ING', 'wonogiri', 'L', 'pns', '0987890654.png'),
+('0987890654', 'Cahyo', 'bantul', '1890-05-11', 'MTK', 'wonogiri', 'P', 'PNS', '0987890654.png'),
 ('19876567', 'Angga', 'sleman', '1987-08-17', 'B.ING', 'sleman', 'L', 'pns', '19876567.png'),
 ('23456', 'Nurhayati', 'bantul', '1999-12-11', 'B.ING', 'wonosari', 'P', 'honorer', '23456.png');
 
@@ -178,7 +199,7 @@ CREATE TABLE `jurusan` (
 INSERT INTO `jurusan` (`id_jurusan`, `nama_jurusan`, `foto`, `deskripsi`) VALUES
 (7, 'Akuntansi', '7.png', 'Akuntansi adalah proses pengidentifikasian, pengukuran, dan pelaporan informasi ekonomi untuk memungkinkan adanya penilaian dan pengambilan keputusan yang jelas dan tegas bagi pihak yang menggunakan informasi tersebut.'),
 (12, 'Rekayasa Perangkat Lunak', '12.png', 'Rekayasa Perangkat Lunak [RPL] atau software engineering adalah salah satu profesi yang mendalami cara mengembangkan perangkat lunak termasuk juga untuk pembuatan, pemeliharaan, manajemen organisasi pengembangan perangkat lunak serta manajemen kualitas.'),
-(13, 'TBSM', '.png', 'Teknik dan Bisnis Sepeda Motor (TBSM) adalah program keahlian yang mempelajari tentang kompetensi teknik otomotif yang menekankan pada keterampilan dan pelayanan jasa mekanik kendaraan sepeda motor. ');
+(13, 'Teknik dan Bisnis Sepeda Motor', '13.png', 'Teknik dan Bisnis Sepeda Motor (TBSM) adalah program keahlian yang mempelajari tentang kompetensi teknik otomotif yang menekankan pada keterampilan dan pelayanan jasa mekanik kendaraan sepeda motor. ');
 
 -- --------------------------------------------------------
 
@@ -220,9 +241,10 @@ CREATE TABLE `master_alumni` (
 --
 
 INSERT INTO `master_alumni` (`id_alumni`, `nama`, `foto`, `jk`, `angkatan`, `tahun_lulus`, `pekerjaan_sekarang`) VALUES
+(0, 'deni', 'deni.png', 'P', 2016, 2022, 'karyawan'),
 (1221, 'Desi', 'Desi.png', 'P', 2016, 2022, 'karyawan'),
-(1222, 'joko', 'dewis.png', 'L', 2015, 2020, 'karyawan'),
-(1223, 'darma', '8064.png', 'L', 2015, 2020, 'pengusaha');
+(1222, 'Joko', 'dewis.png', 'L', 2015, 2020, 'karyawan'),
+(1223, 'Darma', '8064.png', 'L', 2015, 2020, 'pengusaha');
 
 -- --------------------------------------------------------
 
@@ -296,15 +318,16 @@ INSERT INTO `pesan` (`id_pesan`, `nama`, `email`, `pesan`) VALUES
 
 CREATE TABLE `video` (
   `id_video` int(11) NOT NULL,
-  `judul_video` text NOT NULL
+  `judul_video` text NOT NULL,
+  `background` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `video`
 --
 
-INSERT INTO `video` (`id_video`, `judul_video`) VALUES
-(1, 'https://www.youtube.com/embed/dDeyzuvF0uk');
+INSERT INTO `video` (`id_video`, `judul_video`, `background`) VALUES
+(1, 'https://www.youtube.com/embed/wYmN4xyyG18', '');
 
 --
 -- Indexes for dumped tables
@@ -339,6 +362,12 @@ ALTER TABLE `contact`
 --
 ALTER TABLE `extrakurikuler`
   ADD PRIMARY KEY (`id_extra`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id_gallery`);
 
 --
 -- Indexes for table `guru`
@@ -413,6 +442,11 @@ ALTER TABLE `contact`
 ALTER TABLE `extrakurikuler`
   MODIFY `id_extra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
@@ -426,7 +460,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `master_alumni`
 --
 ALTER TABLE `master_alumni`
-  MODIFY `id_alumni` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1224;
+  MODIFY `id_alumni` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1226;
 --
 -- AUTO_INCREMENT for table `organisasi`
 --

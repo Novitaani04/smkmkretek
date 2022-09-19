@@ -40,7 +40,7 @@
     // menerima data formulir dari halaman form_add
       $data = $this->input->post();
 
-      $nmFile = $data['nama'] . ".png";
+      $nmFile = rand(1111,9999) . ".png";
 
       // setting config uploadnya
       $config = [

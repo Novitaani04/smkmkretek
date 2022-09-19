@@ -19,9 +19,8 @@
   
   .gallery_container {
     margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: none;
+    flex-wrap: nowrap;
     width: 80%;
   }
   
@@ -46,10 +45,12 @@
     transition: all 0.35s ease-in-out;
   }
   
-  .gallery_img {
+  .gallery_item img {
     max-width: 100%;
     vertical-align: top;
     height: 310px;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   
   .gallery_item:hover img {
