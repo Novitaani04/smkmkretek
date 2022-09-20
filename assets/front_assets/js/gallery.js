@@ -1,45 +1,7 @@
-var modalInfo = {
-    1: {
-      title: "Project 1",
-      info: "...",
-      link: "#",
-      github: "#"
-    },
-    2: {
-      title: "Project 2",
-      info: "...",
-      link: "#",
-      github: "#"
-    },
-    3: {
-      title: "Project 3",
-      info: "...",
-      link: "#",
-      github: "#"
-    },
-    4: {
-      title: "Project 4",
-      info: "....",
-      link: "#",
-      github: "#"
-    },
-    5: {
-      title: "Project 5",
-      info: "...",
-      link: "#",
-      github: "#"
-    },
-    6: {
-      title: "Project 6",
-      info: "...",
-      link: "#",
-      github: "#"
-    }
-  };
-  
+
   // Get the modal
   var modal = document.getElementById('preview');
-  
+    
   // button that opens the modal
   var btn = document.getElementsByClassName("button");
   

@@ -247,7 +247,7 @@ button {
 }
 
 button:focus {
-  outline: 1px dotted;
+  outline: 1px dotte d;
   outline: 5px auto -webkit-focus-ring-color;
 }
 

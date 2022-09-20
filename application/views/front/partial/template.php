@@ -14,7 +14,7 @@ Author URL: http://w3layouts.com
     <link href="//fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!--//google-fonts-->
     <!-- Template CSS -->
-    <link rel="stylesheet" href="<?= base_url('assets/front_assets/') ?>css/style-starter.css">
+    <link rel="stylesheet" href="<?= base_url('assets/front_assets/') ?>css/style-starter.css"/>
     <link rel="stylesheet" href="<?=base_url('assets/front_assets/css/gallery.css')?>"/>
 </head>
 
@@ -122,7 +122,7 @@ Author URL: http://w3layouts.com
         <!-- /move top -->
     </section>
     <!-- //copyright -->
-    <script src="<?=base_url('assets/front_assets/js/gallery.js')?>"></script>
+
     <script src="<?= base_url('assets/front_assets/') ?>js/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
 
     <script src="<?= base_url('assets/front_assets/') ?>js/theme-change.js"></script><!-- theme switch js (light and dark)-->
@@ -164,6 +164,8 @@ Author URL: http://w3layouts.com
     <!-- //script -->
     <!-- magnific popup -->
     <script src="<?= base_url('assets/front_assets/') ?>js/jquery.magnific-popup.min.js"></script>
+    <!-- gallery -->
+    <script src="<?=base_url('assets/front_assets/js/gallery.js')?>"></script>
     <script>
         $(document).ready(function() {
             $('.popup-with-zoom-anim').magnificPopup({

@@ -5,11 +5,14 @@
             <h3 class="hny-title text-left">Gallery</h3>
         </div>
         <div class="row top-pics ">
-             <?php
-                foreach ($data_gallery as $value) :
+			<div class="gallery_container">
+			<?php
+            // $index = nomor urutanya
+            // $value = isi data per baris
+                foreach ($data_gallery as $index => $value) :
                 ?>
-            <div class="gallery_container">
-                <div class="gallery_item" id="1">
+ 
+                <div class="gallery_item" id="<?= $index ?>">
                     <img src="<?= base_url('foto/gallery/') . $value->foto ?>" alt="">
                     <div class="text">
                         <h3><?= $value->judul?></h4>
@@ -17,8 +20,11 @@
                     </div>
                     <div class="button">Learn More</div>
                 </div>
+			<?php
+            endforeach;
+            ?>
             </div>
-
+ 
             <!-- Modal -->
             <div id="preview" class="modal">
                 <div class="modal-content">
@@ -28,13 +34,33 @@
                         <h3 id="title"></h3>
                         <p id="info">Some text</p>
                         <div class="button" id="live">View</div>
-                        <i class="fab fa-github-square" id="github"></i>
+                        <i id="github"></i>
                     </div>
                 </div>
             </div>
-            <?php
-            endforeach;
-            ?>
+ 
         </div>
     </div>
 </div>
+
+<script>
+    <?php
+    // mempersiapkan variabel data dengan array kosong
+        $data = [];
+        foreach ( $data_gallery as $key => $value) {
+
+            $res = [
+                "title" => $value->judul,
+                "info" => $value->deskripsi,
+                "link" =>base_url('foto/gallery/') . $value->foto,
+                "github" => "#",
+            ];
+            // menambahkan item baru pada variabel data
+            array_push($data,$res);
+        }
+        // konversi dari array ke json
+        $jsonData = json_encode($data);
+   ?>
+    //melakukan konversi lagi dari json ke array javascript    
+    var modalInfo = JSON.parse('<?=$jsonData?>');
+</script>

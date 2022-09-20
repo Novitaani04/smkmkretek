@@ -7,8 +7,8 @@
         </div>
         <div class="row  ">
 
-            <div class="col-lg-6 col-md-6 item">
-                <div style=" background: url(<?= base_url('foto/blog/') . $data_blog->foto ?>) no-repeat center;background-size: 100%;width: 400px;height: 300px;" class="card">
+            <!-- <div class="col-lg-6 col-md-6 item"> -->
+                <div style=" background: url(<?= base_url('foto/blog/') . $data_blog->foto ?>) no-repeat center;background-size: 100%;width: 100%;height: 300px;" class="card">
                     <div class=" position-relative">
                         <img class="card-img-bottom d-block radius-image-full" src="(<?= base_url('foto/blog/') . $data_blog->foto ?>" alt="">
                     </div>
@@ -19,7 +19,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
         
     </div>
