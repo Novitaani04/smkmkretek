@@ -15,15 +15,19 @@
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     
-                    <ul class="navbar-nav mr-auto" style="margin-left:300px;">
+                    <ul class="navbar-nav mr-auto mx-auto">
                         <li class="nav-item <?=$active == 'home' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/Home')?>">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item <?=$active == 'guru' ? 'active' : ''?>">
-                            <a class="nav-link" href="<?=base_url('front/DataGuru')?>">Data Guru</a>
-                        </li>
-                        <li class="nav-item <?=$active == 'alumni' ? 'active' : ''?>">
-                            <a class="nav-link" href="<?=base_url('front/DataAlumni')?>">Data Alumni</a>
+                        <li class="nav-item dropdown <?=$active == 'about' ? 'active' : ''?>">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                About <span class="fa fa-angle-down"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="<?=base_url('front/DataGuru')?>">Data Guru</a>
+                                <a class="dropdown-item" href="<?=base_url('front/DataAlumni')?>">Data Alumni</a>
+                                <a class="dropdown-item" href="<?=base_url('front/DataAbout')?>">Visi dan Misi</a>
+                            </div>
                         </li>
                         <li class="nav-item <?=$active == 'jurusan' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/DataJurusan')?>">Jurusan</a>

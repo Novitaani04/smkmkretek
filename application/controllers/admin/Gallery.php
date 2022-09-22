@@ -43,7 +43,7 @@ class Gallery extends CI_Controller
 
     // beri nama file baru untuk file upload
     // contoh output 
-    $nmFile = $data['id_gallery'] . ".png";
+    $nmFile = rand(1111,9999) . ".png";
 
     // setting config uploadnya
     $config = [

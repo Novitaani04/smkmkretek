@@ -7,7 +7,7 @@
                 ?>
                     <div class="item">
                         <li>
-                            <div style=" background: url(<?= base_url('foto/carousell/') . $value->foto ?>);background-repeat:no-repeat;background-size:100%;" class="slider-info banner-view bg bg2">
+                            <div style=" background: url(<?= base_url('foto/carousell/') . $value->foto ?>);background-repeat:no-repeat;background-size:cover;" class="slider-info banner-view bg bg2">
                                 <div class="<?= $value->foto ?>">
                                     <div class="container">
                                         <div class="banner-info-bg">
@@ -30,31 +30,7 @@
     <!-- /main-slider -->
     <!-- //banner section -->
     <!-- /content-1-->
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <!-- <h3 class="hny-title text-left mb-5">Extrakurikuler</h3> -->
-            <div class="row row-cols-1 row-cols-sm-6 row-cols-md-3 g-3">
-                <?php
-                foreach ($data_about as $value) :
-                ?>
-                    <div class="col-lg-6 content-1-right pl-lg-5 mt-lg-0 mt-4">
-                        <h1>
-                            <center>Visi</center>
-                        </h1> <br>
-                        <p class=""><?= $value->visi ?></p>
-                    </div>
-                    <div class="col-lg-6 content-1-right pl-lg-5 mt-lg-0 mt-4">
-                        <h1>
-                            <center>Misi</center>
-                        </h1> <br>
-                        <p class=""><?= $value->misi ?></p>
-                    </div>
-                <?php
-                endforeach;
-                ?>
-            </div>
-        </div>
-    </div>
+ 
     <!-- //content-1-->
     <!--/courses-->
     <div class="w3l-homeblog py-5" id="homeblog">
