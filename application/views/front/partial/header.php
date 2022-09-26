@@ -24,13 +24,12 @@
                                 About <span class="fa fa-angle-down"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<?=base_url('front/DataGuru')?>">Data Guru</a>
                                 <a class="dropdown-item" href="<?=base_url('front/DataAlumni')?>">Data Alumni</a>
-                                <a class="dropdown-item" href="<?=base_url('front/DataAbout')?>">Visi dan Misi</a>
+                                <a class="dropdown-item" href="<?=base_url('front/VisidanMisi')?>">Visi dan Misi</a>
                             </div>
                         </li>
-                        <li class="nav-item <?=$active == 'jurusan' ? 'active' : ''?>">
-                            <a class="nav-link" href="<?=base_url('front/DataJurusan')?>">Jurusan</a>
+                        <li class="nav-item <?=$active == 'data_guru' ? 'active' : ''?>">
+                            <a class="nav-link" href="<?=base_url('front/DataGuru')?>">DataGuru</a>
                         </li>
                         <li class="nav-item <?=$active == 'gallery' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/Gallery')?>">Gallery</a>

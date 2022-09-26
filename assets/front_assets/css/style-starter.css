@@ -15140,7 +15140,7 @@ header.nav-fixed {
 }
 @media (max-width: 992px) {
   .w3l-main-slider .banner-view {
-    min-height: 600px;
+    min-height: 1000px;
   }
 
   .w3l-main-slider .banner-info-bg h5 {

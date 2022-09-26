@@ -7,7 +7,7 @@
                 ?>
                     <div class="item">
                         <li>
-                            <div style=" background: url(<?= base_url('foto/carousell/') . $value->foto ?>);background-repeat:no-repeat;background-size:cover;" class="slider-info banner-view bg bg2">
+                            <div style="background: url(<?= base_url('foto/carousell/') . $value->foto ?>);background-repeat:no-repeat;background-size:cover;" class="slider-info banner-view bg bg2">
                                 <div class="<?= $value->foto ?>">
                                     <div class="container">
                                         <div class="banner-info-bg">
@@ -45,7 +45,7 @@
                     <div class="col-lg-3 col-md-6 mt-5">
                         <div style=" background: url(<?= base_url('foto/jurusan/') . $value->foto ?>) no-repeat center;background-size: contain;" class="top-pic1">
                             <div class="card-body blog-details ">
-                                <a href="DataJurusan" class="blog-desc"><?= $value->nama_jurusan ?>
+                                <a href="<?= base_url('front/DataJurusan/index/') . $value->id_jurusan ?>" class="blog-desc"><?= $value->nama_jurusan ?>
                                 </a>
                                 <div class="author align-items-center">
                                     <img src="<?= base_url('foto/jurusan/') . $value->foto ?>" alt="" class="img-fluid rounded-circle">
@@ -67,61 +67,62 @@
     </div>
     <!--//courses-->
     <!-- extrakurikuler -->
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <h3 class="hny-title text-left mb-5">Extrakurikuler</h3>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <section class="w3l-blogpost-content py-3">
+        <div class="container py-md-3">
+            <div class="header-title mb-md-5 mt-5">
+
+                <h3 class="hny-title text-left">Extrakurikuler</h3>
+            </div>
+            <div class="row ">
                 <?php
                 foreach ($data_extra as $value) :
                 ?>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="<?= base_url('foto/extra/') . $value->foto ?>" alt="">
-                            <h2 style="margin-top: 10px;"><b>
-                                    <center><?= $value->jenis_extra ?></center>
-                                </b></h2>
-                            <div class="card-body">
-                                <p class="card-text"><?= $value->deskripsi ?></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                </div>
+                    <div class="col-lg-4 col-md-6 item">
+                        <div style=" background: url(<?= base_url('foto/extra/') . $value->foto ?>) no-repeat center;background-size: 100%;width: 350px;height: 200px;" class="card">
+                            <div class="card-header p-0 position-relative">
+                                <img class="card-img-bottom d-block radius-image-full" src="(<?= base_url('foto/extra/') . $value->foto ?>" alt="">
                             </div>
+
                         </div>
+                        <div class="card-body blog-details ">
+                            <a href="<?= base_url('front/DataExtra/index/') . $value->id_extra?>" class="blog-desc"><?= $value->jenis_extra ?>
+                            </a>
+                        </div>
+
                     </div>
                 <?php
                 endforeach;
                 ?>
             </div>
         </div>
-    </div>
+    </section>
     <!-- endextrakurikuler -->
     <!-- organisasi -->
-    <div class="album py-5 bg-light">
-        <div class="container">
+    <section class="w3l-blogpost-content py-3">
+        <div class="container py-md-3">
+            <div class="header-title mb-md-5 mt-5">
 
-            <h3 class="hny-title text-left mb-5">Organisasi</h3>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                <h3 class="hny-title text-left">Organisasi</h3>
+            </div>
+            <div class="row ">
                 <?php
                 foreach ($data_organisasi as $value) :
                 ?>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="<?= base_url('foto/organisasi/') . $value->foto ?>" style="width:200px;height: 200px;">
-                            <h2><b>
-                                    <center><?= $value->nama ?></center>
-                                </b></h2>
-                            <div class="card-body">
-                                <p class="entry-excerpt excerpt card-text"><?= $value->deskripsi ?></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                </div>
-                            </div>
+                    <div class="col-lg-4 col-md-6 item">
+                        <div style=" background: url(<?= base_url('foto/organisasi/') . $value->foto ?>) no-repeat center;background-size: 100%;width: 350px;height: 200px;" class="card">
                         </div>
+                        <div class="card-body blog-details ">
+                            <a href="<?= base_url('front/Organisasi/index/') . $value->id_organisasi?>" class="blog-desc"><?= $value->nama ?>
+                            </a>
+                        </div>
+
                     </div>
                 <?php
                 endforeach;
                 ?>
             </div>
         </div>
-    </div>
+    </section>
     <!-- endorganisasi -->
 
     <!-- //bottom-grids-->

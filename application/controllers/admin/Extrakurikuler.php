@@ -41,7 +41,7 @@ class Extrakurikuler extends CI_Controller
     // menerima data formulir dari halaman form_add
     $data = $this->input->post();
 
-    $nmFile = $data['id_extra'] . ".png";
+    $nmFile = rand(1111, 9999) . ".png";
 
     // setting config uploadnya
     $config = [
@@ -119,10 +119,7 @@ class Extrakurikuler extends CI_Controller
   {
     // menerima data formulir dari halaman form_add
     $data = $this->input->post();
-
-
-    $nmFile = $data['id_extra'] . ".png";
-
+    $nmFile = rand(1111, 9999) . ".png";
     // setting config uploadnya
     $config = [
       "upload_path" => "./foto/extra/", //menentukan lokasi path image yang akan kita gunakan untuk menyimpan gambaha hasil upload

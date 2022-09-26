@@ -3,18 +3,18 @@
     <div class="container py-md-5">
         <div class="header-title mb-md-5 mt-5">
 
-            <h3 class="hny-title text-left mb-2"><?= $data_jurusan->nama_jurusan?></h3>
+            <h3 class="hny-title text-left mb-2"><?= $data_organisasi->nama?></h3>
         </div>
         <div class="row  ">
 
             <!-- <div class="col-lg-6 col-md-6 item"> -->
-                <div style=" background: url(<?= base_url('foto/jurusan/') . $data_jurusan->foto ?>) no-repeat center;width: 100%;height: 700px;" class="card">
+                <div style=" background: url(<?= base_url('foto/organisasi/') . $data_organisasi->foto ?>) no-repeat center;width: 100%;height: 500px;" class="card">
                     <div class=" position-relative">
-                        <img class="card-img-bottom d-block radius-image-full" src="(<?= base_url('foto/jurusan/') . $data_jurusan->foto ?>" alt="">
+                        <img class="card-img-bottom d-block radius-image-full" src="(<?= base_url('foto/organisasi/') . $data_organisasi->foto ?>" alt="">
                     </div>
                 </div>
                 <div class="card-body blog-details ">
-                    <p class="entry-excerpt excerpt mb-3"><?= $data_jurusan->deskripsi ?></p>
+                    <p class="entry-excerpt excerpt mb-3"><?= $data_organisasi->deskripsi?></p>
                     <div class="author align-items-center">
                         </ul>
                     </div>
