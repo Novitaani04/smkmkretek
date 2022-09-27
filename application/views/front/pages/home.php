@@ -30,7 +30,7 @@
     <!-- /main-slider -->
     <!-- //banner section -->
     <!-- /content-1-->
- 
+
     <!-- //content-1-->
     <!--/courses-->
     <div class="w3l-homeblog py-5" id="homeblog">
@@ -85,7 +85,7 @@
 
                         </div>
                         <div class="card-body blog-details ">
-                            <a href="<?= base_url('front/DataExtra/index/') . $value->id_extra?>" class="blog-desc"><?= $value->jenis_extra ?>
+                            <a href="<?= base_url('front/DataExtra/index/') . $value->id_extra ?>" class="blog-desc"><?= $value->jenis_extra ?>
                             </a>
                         </div>
 
@@ -112,7 +112,7 @@
                         <div style=" background: url(<?= base_url('foto/organisasi/') . $value->foto ?>) no-repeat center;background-size: 100%;width: 350px;height: 200px;" class="card">
                         </div>
                         <div class="card-body blog-details ">
-                            <a href="<?= base_url('front/Organisasi/index/') . $value->id_organisasi?>" class="blog-desc"><?= $value->nama ?>
+                            <a href="<?= base_url('front/Organisasi/index/') . $value->id_organisasi ?>" class="blog-desc"><?= $value->nama ?>
                             </a>
                         </div>
 
@@ -133,13 +133,14 @@
 
     <!-- //stats -->
     <!-- home page video popup section -->
-    <section class="w3l-videohny" id="video" style="  background: url('http://i3.ytimg.com/vi/dDeyzuvF0uk/hqdefault.jpg' ) no-repeat center;">
-        <div class="new-block py-5">
-            <div class="container py-lg-5">
-                <div class="history-info position-relative">
-                    <?php
-                    foreach ($data_video as $value) :
-                    ?>
+    <?php
+    foreach ($data_video as $value) :
+    ?>
+        <section class="w3l-videohny" id="video" style="  background: url('https://i3.ytimg.com/vi/dDeyzuvF0uk/sddefault.jpg' ) no-repeat center;">
+            <div class="new-block py-5">
+                <div class="container py-lg-5">
+                    <div class="history-info position-relative">
+
                         <!--//video-->
 
                         <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center pl-3">
@@ -153,18 +154,19 @@
                             <iframe src="<?= $value->judul_video ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                         </div>
                         <!--//video-->
+                    </div>
+
+                    <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                    <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                        <iframe src="<?= $value->judul_video ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
                 </div>
 
-                <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-                <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                    <iframe src="<?= $value->judul_video ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
             </div>
-        <?php
-                    endforeach;
-        ?>
-        </div>
-    </section>
+        </section>
+    <?php
+    endforeach;
+    ?>
     <!-- //home page video popup section -->
     <!--/blog-post-->
     <section class="w3l-blogpost-content py-3">

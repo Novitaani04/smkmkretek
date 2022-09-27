@@ -5,9 +5,12 @@
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
-    <div class="card-header py-3"> 
-        <a href="<?=base_url('admin/video/form_add')?>"class="btn btn-primary mt-3"><i class="fa fa-plus"></i>Tambah data baru</a>
-     
+<div class="card-header py-3">
+        <?php
+            if ($this->db->count_all_results('video') == 0){
+        ?>
+        <a href="<?=base_url('admin/Video/form_add')?>"class="btn btn-primary mt-3"><i class="fa fa-plus"></i>Tambah data baru</a>
+       <?php }?>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -25,7 +28,7 @@
                     <tr>
                         <td><?=$row->id_video?></td>
                         <td><?=$row->judul_video?></td>
-                        <td><?=$row->background?></td>
+                        <td><img src="<?=base_url('foto/video/') . $row->background ?>" alt="<?=$row->background?>"width="120"height="120"></td>
                         <td>
                             <a href="<?=base_url('admin/Video/form_edit/') .$row->id_video?>" class="btn btn-warning">Edit</a>
                             <a href="<?=base_url('admin/Video/hapus/') .$row->id_video?>" class="btn btn-danger"onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Hapus</a>

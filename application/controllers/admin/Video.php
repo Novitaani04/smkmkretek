@@ -49,7 +49,7 @@ class Video extends CI_Controller
         
       ];
       // kirim data kolom ke insertData pada MasterguruModel
- $this->VideoModel->insertData($column);
+      $this->VideoModel->insertData($column);
 
       // jika sudah, tampilkan pesan data guru berhasil ditambahkan
       // setelah itu pindah ke halaman utama pada controller Masterguru
