@@ -1,12 +1,16 @@
 <?php
 class OrganisasiModel extends CI_Model 
 {
-    public function select_all_organisasi()
+    public function select_all_organisasi($limit = 0)
     {
         // menampilkan semua kolom
         $this->db->select('*');
         // didalam table organisasi
         $this->db->from('organisasi');
+        if ($limit > 0) {
+            $this->db->limit($limit); 
+        }
+        
         // ambil result datanya
         $query = $this->db->get();
         // kemudian kembalikan nilai dalam bentuk result(array/assoc)

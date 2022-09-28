@@ -1,12 +1,16 @@
 <?php
 class JurusanModel extends CI_Model 
 {
-    public function select_all_jurusan()
+    public function select_all_jurusan($limit = 0)
     {
         // menampilkan semua kolom
         $this->db->select('*');
         // didalam table jurusan
         $this->db->from('jurusan');
+        if ($limit > 0) {
+            $this->db->limit($limit); 
+        }
+        
         // ambil result datanya
         $query = $this->db->get();
         // kemudian kembalikan nilai dalam bentuk result(array/assoc)

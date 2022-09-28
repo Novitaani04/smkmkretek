@@ -1,12 +1,16 @@
 <?php
 class BlogModel extends CI_Model 
 {
-    public function select_all_blog()
+    public function select_all_blog($limit = 0)
     {
         // menampilkan semua kolom
         $this->db->select('*');
         // didalam table blog
         $this->db->from('blog');
+        if ($limit > 0) {
+            $this->db->limit($limit); 
+        }
+        
         // ambil result datanya
         $query = $this->db->get();
         // kemudian kembalikan nilai dalam bentuk result(array/assoc)

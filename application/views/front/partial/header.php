@@ -25,11 +25,12 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="<?=base_url('front/DataAlumni')?>">Data Alumni</a>
+                                <a class="dropdown-item" href="<?=base_url('front/DataGuru')?>">Data Guru</a>
                                 <a class="dropdown-item" href="<?=base_url('front/VisidanMisi')?>">Visi dan Misi</a>
                             </div>
                         </li>
-                        <li class="nav-item <?=$active == 'data_guru' ? 'active' : ''?>">
-                            <a class="nav-link" href="<?=base_url('front/DataGuru')?>">DataGuru</a>
+                        <li class="nav-item <?=$active == 'blog' ? 'active' : ''?>">
+                            <a class="nav-link" href="<?=base_url('front/HalamanBlog')?>">Blog</a>
                         </li>
                         <li class="nav-item <?=$active == 'gallery' ? 'active' : ''?>">
                             <a class="nav-link" href="<?=base_url('front/Gallery')?>">Gallery</a>

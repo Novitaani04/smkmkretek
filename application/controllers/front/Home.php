@@ -5,10 +5,10 @@
         public function index()
         {
             $dataHome['data_video'] = $this->VideoModel->select_all_video();
-            $dataHome['data_jurusan'] = $this->JurusanModel->select_all_jurusan();
-            $dataHome['data_blog'] = $this->BlogModel->select_all_blog();
-            $dataHome['data_extra'] = $this->ExtraModel->select_all_extra();
-            $dataHome['data_organisasi'] = $this->OrganisasiModel->select_all_organisasi();
+            $dataHome['data_jurusan'] = $this->JurusanModel->select_all_jurusan(4);
+            $dataHome['data_blog'] = $this->BlogModel->select_all_blog(3);
+            $dataHome['data_extra'] = $this->ExtraModel->select_all_extra(3);
+            $dataHome['data_organisasi'] = $this->OrganisasiModel->select_all_organisasi(3);
             $dataHome['data_carousell'] = $this->CarousellModel->select_all_carousell();
             $dataHome['data_about'] = $this->AboutModel->select_all_about();
             $dataGuru['active'] = "home";

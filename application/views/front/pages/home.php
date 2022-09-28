@@ -63,6 +63,9 @@
                 endforeach;
                 ?>
             </div>
+            <div class="text-right mx-auto mt-md-4">
+                <a class="btn btn-primary btn-style mt-md-5 mt-4" href="HalamanJurusan">Selengkapnya<span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
+            </div>
         </div>
     </div>
     <!--//courses-->
@@ -73,7 +76,7 @@
 
                 <h3 class="hny-title text-left">Extrakurikuler</h3>
             </div>
-            <div class="row ">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5">
                 <?php
                 foreach ($data_extra as $value) :
                 ?>
@@ -94,6 +97,9 @@
                 endforeach;
                 ?>
             </div>
+            <div class="text-right mx-auto">
+                <a class="btn btn-primary btn-style mt-md-5 mt-4" href="HalamanExtra">Selengkapnya<span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
+            </div>
         </div>
     </section>
     <!-- endextrakurikuler -->
@@ -104,7 +110,7 @@
 
                 <h3 class="hny-title text-left">Organisasi</h3>
             </div>
-            <div class="row ">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5">
                 <?php
                 foreach ($data_organisasi as $value) :
                 ?>
@@ -120,6 +126,9 @@
                 <?php
                 endforeach;
                 ?>
+            </div>
+            <div class="readhny-btm text-right mx-auto ">
+                <a class="btn btn-primary btn-style mt-md-5 mt-4" href="HalamanOrganisasi">Selengkapnya<span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
             </div>
         </div>
     </section>
@@ -175,7 +184,7 @@
 
                 <h3 class="hny-title text-left">Blog </h3>
             </div>
-            <div class="row ">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5">
                 <?php
                 foreach ($data_blog as $value) :
                 ?>
@@ -203,6 +212,9 @@
                 <?php
                 endforeach;
                 ?>
+            </div>
+            <div class="readhny-btm text-right mx-auto">
+                <a class="btn btn-primary btn-style" href="HalamanBlog">Selengkapnya<span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
             </div>
         </div>
     </section>

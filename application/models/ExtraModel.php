@@ -1,12 +1,16 @@
 <?php
 class ExtraModel extends CI_Model 
 {
-    public function select_all_extra()
+    public function select_all_extra($limit = 0)
     {
         // menampilkan semua kolom
         $this->db->select('*');
-        // didalam table extrakurikuler
+        // didalam table extra
         $this->db->from('extrakurikuler');
+        if ($limit > 0) {
+            $this->db->limit($limit); 
+        }
+        
         // ambil result datanya
         $query = $this->db->get();
         // kemudian kembalikan nilai dalam bentuk result(array/assoc)
